@@ -11,10 +11,13 @@ class Solution {
      */
     private char[] arr;
 
+    /**
+     * Setting array of chars.
+     * @param str is a given string.
+     */
     private void setArr(String str){
         arr = str.toCharArray();
     }
-
 
     /**
      * Checking if arr has all the characters unique in place.
