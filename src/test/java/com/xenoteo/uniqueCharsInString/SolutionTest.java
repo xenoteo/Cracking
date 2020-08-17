@@ -9,32 +9,28 @@ public class SolutionTest {
     private final String str3 = "dermatoglyphics";
     private final String str4 = "uncopyrightable";
 
-    private final Solution ex1 = new Solution(str1);
-    private final Solution ex2 = new Solution(str2);
-    private final Solution ex3 = new Solution(str3);
-    private final Solution ex4 = new Solution(str4);
-
+    private final Solution ex = new Solution();
     @Test
     public void isUniqueInPlaceTest(){
-        Assert.assertFalse(ex1.isUniqueInPlace());
-        Assert.assertFalse(ex2.isUniqueInPlace());
-        Assert.assertTrue(ex3.isUniqueInPlace());
-        Assert.assertTrue(ex4.isUniqueInPlace());
+        Assert.assertFalse(ex.isUniqueInPlace(str1));
+        Assert.assertFalse(ex.isUniqueInPlace(str2));
+        Assert.assertTrue(ex.isUniqueInPlace(str3));
+        Assert.assertTrue(ex.isUniqueInPlace(str4));
     }
 
     @Test
     public void isUniqueWithSortingTest(){
-        Assert.assertFalse(ex1.isUniqueWithSorting());
-        Assert.assertFalse(ex2.isUniqueWithSorting());
-        Assert.assertTrue(ex3.isUniqueWithSorting());
-        Assert.assertTrue(ex4.isUniqueWithSorting());
+        Assert.assertFalse(ex.isUniqueWithSorting(str1));
+        Assert.assertFalse(ex.isUniqueWithSorting(str2));
+        Assert.assertTrue(ex.isUniqueWithSorting(str3));
+        Assert.assertTrue(ex.isUniqueWithSorting(str4));
     }
 
     @Test
     public void isUniqueWithSetTest(){
-        Assert.assertFalse(ex1.isUniqueWithSet());
-        Assert.assertFalse(ex2.isUniqueWithSet());
-        Assert.assertTrue(ex3.isUniqueWithSet());
-        Assert.assertTrue(ex4.isUniqueWithSet());
+        Assert.assertFalse(ex.isUniqueWithSet(str1));
+        Assert.assertFalse(ex.isUniqueWithSet(str2));
+        Assert.assertTrue(ex.isUniqueWithSet(str3));
+        Assert.assertTrue(ex.isUniqueWithSet(str4));
     }
 }

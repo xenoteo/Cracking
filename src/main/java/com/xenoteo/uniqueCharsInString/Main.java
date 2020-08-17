@@ -18,11 +18,11 @@ public class Main {
      * @param str is a provided string
      */
     private static void printAreCharsInStrUnique(String str){
-        Solution ex = new Solution(str);
+        Solution ex = new Solution();
         System.out.printf("\"%s\"\n%-13s: %b\n%-13s: %b\n%-13s: %b\n\n",
                 str,
-                IN_PLACE, ex.isUniqueInPlace(),
-                WITH_SORTING, ex.isUniqueWithSorting(),
-                WITH_SET, ex.isUniqueWithSet());
+                IN_PLACE, ex.isUniqueInPlace(str),
+                WITH_SORTING, ex.isUniqueWithSorting(str),
+                WITH_SET, ex.isUniqueWithSet(str));
     }
 }
