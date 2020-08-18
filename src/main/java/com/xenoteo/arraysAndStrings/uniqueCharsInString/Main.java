@@ -1,4 +1,4 @@
-package com.xenoteo.uniqueCharsInString;
+package com.xenoteo.arraysAndStrings.uniqueCharsInString;
 
 public class Main {
     private static final String IN_PLACE = "in place";

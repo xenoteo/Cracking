@@ -1,4 +1,4 @@
-package com.xenoteo.stringPermutation;
+package com.xenoteo.arraysAndStrings.stringPermutation;
 
 public class Main {
     private static final String WITH_SORTING = "with sorting";

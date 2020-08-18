@@ -1,4 +1,4 @@
-package com.xenoteo.stringPermutation;
+package com.xenoteo.arraysAndStrings.stringPermutation;
 
 import java.util.Arrays;
 import java.util.HashMap;

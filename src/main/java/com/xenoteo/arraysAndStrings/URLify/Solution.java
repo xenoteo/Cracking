@@ -1,4 +1,4 @@
-package com.xenoteo.URLify;
+package com.xenoteo.arraysAndStrings.URLify;
 
 /**
  * Replacing all spaces in a string with '%20'.

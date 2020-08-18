@@ -1,4 +1,4 @@
-package com.xenoteo.URLify;
+package com.xenoteo.arraysAndStrings.URLify;
 
 import org.junit.Assert;
 import org.junit.Test;

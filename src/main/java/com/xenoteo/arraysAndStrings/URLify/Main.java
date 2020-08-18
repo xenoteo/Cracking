@@ -1,4 +1,4 @@
-package com.xenoteo.URLify;
+package com.xenoteo.arraysAndStrings.URLify;
 
 public class Main {
     private static final String OLD = "original string";
