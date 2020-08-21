@@ -7,7 +7,7 @@ public class Solution {
 
     /**
      * Rotating given N*N matrix by 90 degrees.
-     * Complexity is O(N^2).
+     * Time complexity is O(N^2), space complexity is O(N^2).
      * @param matrix to rotate
      * @return rotated matrix
      */
