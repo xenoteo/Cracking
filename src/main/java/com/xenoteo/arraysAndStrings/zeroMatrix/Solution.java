@@ -1,6 +1,5 @@
 package com.xenoteo.arraysAndStrings.zeroMatrix;
 
-import java.util.Arrays;
 import java.util.HashSet;
 
 /**
