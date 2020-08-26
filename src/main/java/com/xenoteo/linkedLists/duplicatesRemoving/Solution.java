@@ -32,9 +32,8 @@ public class Solution {
      */
     public Node removeDuplicatesWithSet(Node head){
         HashSet<Integer> numbersSet = new HashSet<>();
-        numbersSet.add(head.val);
-        Node prev = head;
-        Node cur = head.next;
+        Node prev = null;
+        Node cur = head;
         while (cur != null){
             if (!numbersSet.add(cur.val)) {
                 prev.next = cur.next;
@@ -53,9 +52,8 @@ public class Solution {
      */
     private void setUnique(Node head, int val){
         boolean found = false;
-        if (head.val == val) found = true;
-        Node prev = head;
-        Node cur = head.next;
+        Node prev = null;
+        Node cur = head;
         while (cur != null){
             if (cur.val == val && found) {
                 prev.next = cur.next;
