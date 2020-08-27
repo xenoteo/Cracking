@@ -10,7 +10,11 @@ public class List {
         head = node;
     }
 
-    public boolean equals(Node other){
+    public boolean equals(Object obj){
+        if (!(obj instanceof List || obj instanceof Node)) return false;
+        Node other;
+        if (obj instanceof Node) other = (Node) obj;
+        else other = ((List) obj).head;
         Node that = head;
         while (that != null && other != null){
             if (that.val != other.val) return false;
@@ -32,6 +36,15 @@ public class List {
         stringBuilder.append(node.val);
         stringBuilder.append("]");
         return stringBuilder.toString();
+    }
+
+    public Node find(int val){
+        Node node = head;
+        while (node != null){
+            if (node.val == val) return node;
+            node = node.next;
+        }
+        return null;
     }
 
 }
