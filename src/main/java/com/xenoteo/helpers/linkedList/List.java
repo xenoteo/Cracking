@@ -38,6 +38,11 @@ public class List {
         return stringBuilder.toString();
     }
 
+    /**
+     * Finding the first node of given value;
+     * @param val to find
+     * @return node of given value
+     */
     public Node find(int val){
         Node node = head;
         while (node != null){
@@ -47,4 +52,17 @@ public class List {
         return null;
     }
 
+    /**
+     * Counting the length of the list.
+     * @return the length of the list
+     */
+    public int length(){
+        Node node = head;
+        int n = 0;
+        while (node != null){
+            n++;
+            node = node.next;
+        }
+        return n;
+    }
 }
