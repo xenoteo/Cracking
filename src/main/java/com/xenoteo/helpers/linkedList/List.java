@@ -39,7 +39,8 @@ public class List {
     }
 
     /**
-     * Finding the first node of given value;
+     * Finding the first node of given value.
+     * Complexity is O(N).
      * @param val to find
      * @return node of given value
      */
@@ -54,6 +55,7 @@ public class List {
 
     /**
      * Counting the length of the list.
+     * Complexity is O(N).
      * @return the length of the list
      */
     public int length(){
@@ -64,5 +66,28 @@ public class List {
             node = node.next;
         }
         return n;
+    }
+
+    /**
+     * Reversing the list.
+     * Time complexity is O(N), space complexity is O(N).
+     * @return the head of reversed list
+     */
+    public Node reversed(){
+        int[] nums = new int[length()];
+
+        Node node = head;
+        for (int i = 0; i < nums.length; i++){
+            nums[i] = node.val;
+            node = node.next;
+        }
+
+        Node tail = null;
+        for (int num : nums) {
+            Node newNode = new Node(num);
+            newNode.next = tail;
+            tail = newNode;
+        }
+        return tail;
     }
 }
