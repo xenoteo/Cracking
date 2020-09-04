@@ -90,4 +90,67 @@ public class List {
         }
         return tail;
     }
+
+    /**
+     * Checking whether list contains a node with provided reference.
+     * Complexity is O(N).
+     * @param node to check
+     * @return if list contains the node
+     */
+    public boolean contains(Node node){
+        Node cur = head;
+        while (cur != null){
+            if (cur == node) return true;
+            cur = cur.next;
+        }
+        return false;
+    }
+
+    /**
+     * Finding the last node of the list.
+     * Complexity is O(N).
+     * @return the last node of the list
+     */
+    public Node last(){
+        if (head == null) return null;
+        Node node = head;
+        while (node.next != null){
+            node = node.next;
+        }
+        return node;
+    }
+
+    /**
+     * Finding the kth node of the list.
+     * Complexity is O(N).
+     * @param k is index of element to find
+     * @return the kth element of the list
+     */
+    public Node get(int k){
+        Node node = head;
+        for (int i = 0; i < k; i++){
+            if (node == null) return null;
+            node = node.next;
+        }
+        return node;
+    }
+
+    /**
+     * Generating the string of the list representing each node's reference.
+     * Complexity id O(N).
+     * @return string representing nodes references.
+     */
+    public String referencesToString(){
+        Node node = head;
+        StringBuilder str = new StringBuilder();
+        str.append("[");
+        while (node.next != null){
+            str.append(node);
+            str.append(", ");
+            node = node.next;
+        }
+        str.append(node);
+        str.append("]");
+        return str.toString();
+    }
 }
