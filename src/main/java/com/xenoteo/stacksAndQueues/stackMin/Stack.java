@@ -1,7 +1,5 @@
 package com.xenoteo.stacksAndQueues.stackMin;
 
-import com.xenoteo.helpers.linkedList.Node;
-
 import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.EmptyStackException;
@@ -11,8 +9,7 @@ import java.util.EmptyStackException;
  * Push, pop and min operate in 0(1) time.
  * Using additional stack to keep track of minimum elements.
  */
-public class Stack {
-    private Node last = null;
+public class Stack extends com.xenoteo.helpers.stack.Stack {
     private final Deque<Integer> mins;
 
     public Stack(){
@@ -20,26 +17,20 @@ public class Stack {
     }
 
     public void push(int x){
-        Node node = new Node(x, last);
         if (last == null || x < min())
             mins.push(x);
-        last = node;
+        super.push(x);
     }
 
     public int pop(){
-        if (isEmpty())
-            throw new EmptyStackException();
-        int x = last.val;
+        int x = super.pop();
         if (x == min())
             mins.pop();
-        last = last.next;
         return x;
     }
 
     public int peek(){
-        if (isEmpty())
-            throw new EmptyStackException();
-        return last.val;
+        return super.peek();
     }
 
     public int min(){
@@ -49,6 +40,6 @@ public class Stack {
     }
 
     public boolean isEmpty(){
-        return last == null;
+        return super.isEmpty();
     }
 }
