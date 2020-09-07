@@ -7,7 +7,7 @@ import java.util.EmptyStackException;
 
 public class StackTest {
 
-    private Stack getStackWithData(){
+    private Stack createAndFillStack(){
         Stack stack = new Stack();
 
         stack.push(1, 1);
@@ -27,7 +27,7 @@ public class StackTest {
 
     @Test
     public void pushAndPopTest(){
-        Stack stack = getStackWithData();
+        Stack stack = createAndFillStack();
         Assert.assertEquals(3, stack.pop(1));
         Assert.assertEquals(2, stack.pop(1));
         Assert.assertEquals(1, stack.pop(1));
@@ -39,7 +39,7 @@ public class StackTest {
 
     @Test
     public void pushAndPeekTest(){
-        Stack stack = getStackWithData();
+        Stack stack = createAndFillStack();
         Assert.assertEquals(3, stack.peek(1));
         Assert.assertEquals(4, stack.peek(2));
         Assert.assertEquals(9, stack.peek(3));
@@ -47,7 +47,7 @@ public class StackTest {
 
     @Test
     public void pushPopAndIsEmptyTest(){
-        Stack stack = getStackWithData();
+        Stack stack = createAndFillStack();
         stack.pop(2);
         stack.pop(2);
         Assert.assertTrue(stack.isEmpty(2));
@@ -57,7 +57,7 @@ public class StackTest {
 
     @Test(expected = EmptyStackException.class)
     public void popEmptyStackTest(){
-        Stack stack = getStackWithData();
+        Stack stack = createAndFillStack();
         stack.pop(2);
         stack.pop(2);
         stack.pop(2);
@@ -65,7 +65,7 @@ public class StackTest {
 
     @Test(expected = EmptyStackException.class)
     public void peekEmptyStackTest(){
-        Stack stack = getStackWithData();
+        Stack stack = createAndFillStack();
         stack.pop(2);
         stack.pop(2);
         stack.peek(2);
