@@ -8,18 +8,14 @@ import com.xenoteo.helpers.stack.Stack;
  * Two additional stacks used.
  * Complexity of sort is O(N^2).
  */
-public class SortingStackWithBuff extends Stack implements ISortingStack{
-    private final Stack sorted;
-    private final Stack buff;
+public class InsertionSortWithBuff implements Sort {
 
-    public SortingStackWithBuff(){
-        sorted = new Stack();
-        buff = new Stack();
-    }
+    public Stack sort(Stack stack) {
+        Stack sorted = new Stack();
+        Stack buff = new Stack();
 
-    public void sort(){
-        while (!isEmpty()){
-            int x = pop();
+        while (!stack.isEmpty()){
+            int x = stack.pop();
             while (!sorted.isEmpty() && sorted.peek() > x)
                 buff.push(sorted.pop());
             sorted.push(x);
@@ -27,6 +23,8 @@ public class SortingStackWithBuff extends Stack implements ISortingStack{
                 sorted.push(buff.pop());
         }
         while (!sorted.isEmpty())
-            push(sorted.pop());
+            stack.push(sorted.pop());
+
+        return stack;
     }
 }

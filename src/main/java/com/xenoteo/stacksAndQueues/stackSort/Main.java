@@ -1,22 +1,34 @@
 package com.xenoteo.stacksAndQueues.stackSort;
 
+import com.xenoteo.helpers.stack.Stack;
+
 public class Main {
     public static void main(String[] args) {
-        ISortingStack stack1 = new SortingStack();
-        System.out.println("ISortingStack stack = new SortingStack();");
-        printSorting(stack1);
+        Sort sort1 = new InsertionSort();
+        System.out.println("Sort sort = new InsertionSort();");
+        printSorting(sort1);
 
-        ISortingStack stack2 = new SortingStackWithBuff();
-        System.out.println("ISortingStack stack = new SortingStackWithBuff();");
-        printSorting(stack2);
+        Sort sort2 = new InsertionSortWithBuff();
+        System.out.println("Sort sort = new InsertionSortWithBuff();");
+        printSorting(sort2);
+
+        Sort sort3 = new InsertionSort();
+        System.out.println("Sort sort = new MergeSort();");
+        printSorting(sort3);
+
+        Sort sort4 = new InsertionSort();
+        System.out.println("Sort sort = new QuickSort();");
+        printSorting(sort4);
     }
 
     /**
-     * Printing all operations made on given stack
+     * Printing all operations made on stack
      * to demonstrate the sorting of the stack.
-     * @param stack to sort
+     * @param sorting to use
      */
-    private static void printSorting(ISortingStack stack){
+    private static void printSorting(Sort sorting){
+        Stack stack = new Stack();
+
         stack.push(3);
         stack.push(5);
         stack.push(4);
@@ -28,8 +40,8 @@ public class Main {
                 "stack.push(1);\n" +
                 "stack.push(1);\n");
 
-        stack.sort();
-        System.out.println("stack.sort();\n");
+        stack = sorting.sort(stack);
+        System.out.println("stack = sort.sort(stack);\n");
 
         System.out.printf("stack.pop() = %d\n", stack.pop());
         System.out.printf("stack.pop() = %d\n", stack.pop());

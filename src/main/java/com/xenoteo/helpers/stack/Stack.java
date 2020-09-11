@@ -42,4 +42,8 @@ public class Stack implements IStack{
         }
         return count;
     }
+
+    public String toString(){
+        return new List(last).toString();
+    }
 }

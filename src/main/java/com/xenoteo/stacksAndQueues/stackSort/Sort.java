@@ -1,4 +1,4 @@
-package com.xenoteo.stacksAndQueues.stackSort.recursive;
+package com.xenoteo.stacksAndQueues.stackSort;
 
 import com.xenoteo.helpers.stack.Stack;
 

@@ -9,21 +9,18 @@ import com.xenoteo.helpers.stack.Stack;
  * using of the second additional stack is replaced with using of the main stack.
  * Complexity of sort is O(N^2).
  */
-public class SortingStack extends Stack implements ISortingStack{
-    private final Stack sorted;
+public class InsertionSort implements Sort {
 
-    public SortingStack(){
-        sorted = new Stack();
-    }
-
-    public void sort(){
-        while (!isEmpty()){
-            int x = pop();
+    public Stack sort(Stack stack) {
+        Stack sorted = new Stack();
+        while (!stack.isEmpty()){
+            int x = stack.pop();
             while (!sorted.isEmpty() && sorted.peek() > x)
-                push(sorted.pop());
+                stack.push(sorted.pop());
             sorted.push(x);
         }
         while (!sorted.isEmpty())
-            push(sorted.pop());
+            stack.push(sorted.pop());
+        return stack;
     }
 }

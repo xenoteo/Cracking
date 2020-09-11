@@ -1,10 +1,13 @@
-package com.xenoteo.stacksAndQueues.stackSort.recursive;
+package com.xenoteo.stacksAndQueues.stackSort;
 
 import com.xenoteo.helpers.stack.Stack;
 import org.junit.Assert;
 import org.junit.Test;
 
-public abstract class IRecursiveSortTest {
+/**
+ * Abstract class to extend and to test all sorting classes.
+ */
+public abstract class SortTest {
     protected abstract Sort createSorting();
 
     @Test
