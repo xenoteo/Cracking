@@ -1,5 +1,6 @@
 package com.xenoteo.helpers.stack;
 
+import com.xenoteo.helpers.linkedList.List;
 import com.xenoteo.helpers.linkedList.Node;
 
 import java.util.EmptyStackException;
@@ -30,5 +31,15 @@ public class Stack implements IStack{
 
     public boolean isEmpty(){
         return last == null;
+    }
+
+    public int size() {
+        int count = 0;
+        Node node = last;
+        while (node != null){
+            count++;
+            node = node.next;
+        }
+        return count;
     }
 }
