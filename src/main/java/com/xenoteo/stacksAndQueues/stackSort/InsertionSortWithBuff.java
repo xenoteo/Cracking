@@ -3,7 +3,7 @@ package com.xenoteo.stacksAndQueues.stackSort;
 import com.xenoteo.helpers.stack.Stack;
 
 /**
- * Stack implementing stack sort such that the smallest items are on the top,
+ * Implementing stack sort such that the smallest items are on the top,
  * without copying the elements into any other data structure.
  * Two additional stacks used.
  * Complexity of sort is O(N^2).
