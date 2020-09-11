@@ -19,14 +19,9 @@ public class SortingStack extends Stack implements ISortingStack{
     public void sort(){
         while (!isEmpty()){
             int x = pop();
-            int next = -1;
-            if (!isEmpty())
-                 next = peek();
             while (!sorted.isEmpty() && sorted.peek() > x)
                 push(sorted.pop());
             sorted.push(x);
-            while (!isEmpty() && peek() != next)
-                sorted.push(pop());
         }
         while (!sorted.isEmpty())
             push(sorted.pop());
