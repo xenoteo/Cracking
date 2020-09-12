@@ -42,4 +42,5 @@ Solving problems.
 - [Interface for queues](https://github.com/xenoteo/Cracking/tree/master/src/main/java/com/xenoteo/helpers/queue/IQueue.java).
 - [EmptyQueueException](https://github.com/xenoteo/Cracking/blob/master/src/main/java/com/xenoteo/helpers/emptyQueueException/EmptyQueueException.java) to indicate that a queue is empty.
 - Abstract class for easier and more optimal [testing of different queues](https://github.com/xenoteo/Cracking/blob/master/src/test/java/com/xenoteo/helpers/queue/IQueueTest.java).
+- Adjacency list based [graph](https://github.com/xenoteo/Cracking/tree/master/src/main/java/com/xenoteo/helpers/graph).
 
