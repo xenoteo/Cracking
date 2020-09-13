@@ -32,12 +32,15 @@ Solving problems.
   - [Merge sort](https://github.com/xenoteo/Cracking/blob/master/src/main/java/com/xenoteo/stacksAndQueues/stackSort/MergeSort.java) (+[tests](https://github.com/xenoteo/Cracking/blob/master/src/test/java/com/xenoteo/stacksAndQueues/stackSort/MergeSortTest.java)).
   - [Quick sort](https://github.com/xenoteo/Cracking/blob/master/src/main/java/com/xenoteo/stacksAndQueues/stackSort/QuickSort.java) (+[tests](https://github.com/xenoteo/Cracking/blob/master/src/test/java/com/xenoteo/stacksAndQueues/stackSort/QuickSortTest.java)).
 - Implementing queue based [animal shelter](https://github.com/xenoteo/Cracking/blob/master/src/main/java/com/xenoteo/stacksAndQueues/animalShelter/AnimalShelter.java) (+[tests](https://github.com/xenoteo/Cracking/blob/master/src/test/java/com/xenoteo/stacksAndQueues/animalShelter/AnimalShelterTest.java)).
+### Trees and graphs
+- Given a directed graph finding out whether there is a [route between two nodes](https://github.com/xenoteo/Cracking/blob/master/src/main/java/com/xenoteo/treesAndGraphs/routeBetweenNodes/Solution.java) (+[tests](https://github.com/xenoteo/Cracking/blob/master/src/test/java/com/xenoteo/treesAndGraphs/routeBetweenNodes/SolutionTest.java)).
 ## Helpers
 - Simple [linked list](https://github.com/xenoteo/Cracking/blob/master/src/main/java/com/xenoteo/helpers/linkedList/List.java) implementation based on [nodes](https://github.com/xenoteo/Cracking/blob/master/src/main/java/com/xenoteo/helpers/linkedList/Node.java) and [generator](https://github.com/xenoteo/Cracking/blob/master/src/main/java/com/xenoteo/helpers/linkedList/ListGenerator.java) for generating linked lists from an array.
 - Simple [linked list based stack](https://github.com/xenoteo/Cracking/blob/master/src/main/java/com/xenoteo/helpers/stack/Stack.java) and [stack with limited capacity](https://github.com/xenoteo/Cracking/blob/master/src/main/java/com/xenoteo/helpers/stack/StackLimited.java), using the same [interface](https://github.com/xenoteo/Cracking/blob/master/src/main/java/com/xenoteo/helpers/stack/IStack.java) (+[tests](https://github.com/xenoteo/Cracking/tree/master/src/test/java/com/xenoteo/helpers/stack)).
-- [FullStackException](https://github.com/xenoteo/Cracking/blob/master/src/main/java/com/xenoteo/helpers/fullStackException/FullStackException.java) to indicate that a stack is full.
-- Abstract class for easier and more optimal [testing of different stacks](https://github.com/xenoteo/Cracking/blob/master/src/test/java/com/xenoteo/helpers/stack/IStackTest.java).
+  - [FullStackException](https://github.com/xenoteo/Cracking/blob/master/src/main/java/com/xenoteo/helpers/fullStackException/FullStackException.java) to indicate that a stack is full.
+  - Abstract class for easier and more optimal [testing of different stacks](https://github.com/xenoteo/Cracking/blob/master/src/test/java/com/xenoteo/helpers/stack/IStackTest.java).
 - [Interface for queues](https://github.com/xenoteo/Cracking/tree/master/src/main/java/com/xenoteo/helpers/queue/IQueue.java).
-- [EmptyQueueException](https://github.com/xenoteo/Cracking/blob/master/src/main/java/com/xenoteo/helpers/emptyQueueException/EmptyQueueException.java) to indicate that a queue is empty.
-- Abstract class for easier and more optimal [testing of different queues](https://github.com/xenoteo/Cracking/blob/master/src/test/java/com/xenoteo/helpers/queue/IQueueTest.java).
+  - [EmptyQueueException](https://github.com/xenoteo/Cracking/blob/master/src/main/java/com/xenoteo/helpers/emptyQueueException/EmptyQueueException.java) to indicate that a queue is empty.
+  - Abstract class for easier and more optimal [testing of different queues](https://github.com/xenoteo/Cracking/blob/master/src/test/java/com/xenoteo/helpers/queue/IQueueTest.java).
+- Adjacency list based [graph](https://github.com/xenoteo/Cracking/tree/master/src/main/java/com/xenoteo/helpers/graph).
 
