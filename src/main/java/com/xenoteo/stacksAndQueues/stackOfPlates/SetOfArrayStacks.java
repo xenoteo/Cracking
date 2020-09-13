@@ -1,6 +1,6 @@
 package com.xenoteo.stacksAndQueues.stackOfPlates;
 
-import com.xenoteo.helpers.fullStackException.FullStackException;
+import com.xenoteo.helpers.stack.exceptions.FullStackException;
 
 import java.util.ArrayList;
 import java.util.EmptyStackException;

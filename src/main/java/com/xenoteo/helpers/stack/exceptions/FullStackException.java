@@ -1,4 +1,4 @@
-package com.xenoteo.helpers.fullStackException;
+package com.xenoteo.helpers.stack.exceptions;
 
 /**
  * Exception thrown while the stack of limited capacity is full.

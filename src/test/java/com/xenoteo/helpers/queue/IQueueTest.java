@@ -1,6 +1,6 @@
 package com.xenoteo.helpers.queue;
 
-import com.xenoteo.helpers.emptyQueueException.EmptyQueueException;
+import com.xenoteo.helpers.queue.exceptions.EmptyQueueException;
 import org.junit.Assert;
 import org.junit.Test;
 

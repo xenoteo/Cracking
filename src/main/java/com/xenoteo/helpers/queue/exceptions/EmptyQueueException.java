@@ -1,4 +1,4 @@
-package com.xenoteo.helpers.emptyQueueException;
+package com.xenoteo.helpers.queue.exceptions;
 
 /**
  * Exception thrown while the queue is empty.

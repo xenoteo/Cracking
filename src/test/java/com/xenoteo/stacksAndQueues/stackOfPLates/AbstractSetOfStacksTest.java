@@ -1,9 +1,8 @@
 package com.xenoteo.stacksAndQueues.stackOfPLates;
 
-import com.xenoteo.helpers.fullStackException.FullStackException;
+import com.xenoteo.helpers.stack.exceptions.FullStackException;
 import com.xenoteo.helpers.stack.IStackTest;
 import com.xenoteo.stacksAndQueues.stackOfPlates.ISetOfStacks;
-import com.xenoteo.stacksAndQueues.stackOfPlates.SetOfArrayStacks;
 import org.junit.Assert;
 import org.junit.Test;
 

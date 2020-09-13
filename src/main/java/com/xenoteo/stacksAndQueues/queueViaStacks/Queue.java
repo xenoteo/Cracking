@@ -1,6 +1,6 @@
 package com.xenoteo.stacksAndQueues.queueViaStacks;
 
-import com.xenoteo.helpers.emptyQueueException.EmptyQueueException;
+import com.xenoteo.helpers.queue.exceptions.EmptyQueueException;
 import com.xenoteo.helpers.queue.IQueue;
 import com.xenoteo.helpers.stack.Stack;
 

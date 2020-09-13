@@ -1,6 +1,6 @@
 package com.xenoteo.helpers.stack;
 
-import com.xenoteo.helpers.fullStackException.FullStackException;
+import com.xenoteo.helpers.stack.exceptions.FullStackException;
 
 /**
  * Simple linked list based limited stack.
