@@ -1,6 +1,7 @@
 package com.xenoteo.treesAndGraphs.listOfDepths;
 
 import com.xenoteo.helpers.tree.Node;
+import com.xenoteo.helpers.tree.TreeNode;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -15,8 +16,8 @@ public class Solution {
      * @param root of a tree
      * @return list of nodes at each depth
      */
-    public ArrayList<LinkedList<Node>> getListOfDepthsDfs(Node root){
-        ArrayList<LinkedList<Node>> lists = new ArrayList<>();
+    public ArrayList<LinkedList<TreeNode>> getListOfDepthsDfs(Node root){
+        ArrayList<LinkedList<TreeNode>> lists = new ArrayList<>();
         traverse(root, 0, lists);
         return lists;
     }
@@ -27,9 +28,9 @@ public class Solution {
      * @param depth of a current node
      * @param lists of nodes at each depth
      */
-    private void traverse(Node node, int depth, ArrayList<LinkedList<Node>> lists){
+    private void traverse(TreeNode node, int depth, ArrayList<LinkedList<TreeNode>> lists){
         if (node == null) return;
-        LinkedList<Node> list;
+        LinkedList<TreeNode> list;
         if (lists.size() > depth)
             list = lists.get(depth);
         else {
@@ -46,17 +47,17 @@ public class Solution {
      * @param root of a tree
      * @return list of nodes at each depth
      */
-    public ArrayList<LinkedList<Node>> getListOfDepthsBfs(Node root){
-        ArrayList<LinkedList<Node>> lists = new ArrayList<>();
+    public ArrayList<LinkedList<TreeNode>> getListOfDepthsBfs(Node root){
+        ArrayList<LinkedList<TreeNode>> lists = new ArrayList<>();
 
-        LinkedList<Node> current = new LinkedList<>();
+        LinkedList<TreeNode> current = new LinkedList<>();
         current.add(root);
 
         while(!current.isEmpty()){
             lists.add(current);
-            LinkedList<Node> parents = current;
+            LinkedList<TreeNode> parents = current;
             current = new LinkedList<>();
-            for (Node node : parents){
+            for (TreeNode node : parents){
                 if (node.left != null)
                     current.add(node.left);
                 if (node.right != null)
