@@ -6,16 +6,16 @@ import com.xenoteo.helpers.tree.TreeNodeFactory;
 public class Main {
     private static final String WITH_RANGE = "with range";
     private static final String WITH_LIST = "with list";
-    private static final String REMEMBERING_VALUE = "remembering last value"; // 22
+    private static final String REMEMBERING_VALUE = "remembering last value";
 
     public static void main(String[] args) {
-        printChecks();
+        printBSTValidations();
     }
 
     /**
      * Creating one BST and one not BST and checking if they are BST using different approaches.
      */
-    private static void printChecks(){
+    private static void printBSTValidations(){
         TreeNode bst = createBST();
         TreeNode notBst = createNotBST();
         printCheck("Checking BST\n", bst);
