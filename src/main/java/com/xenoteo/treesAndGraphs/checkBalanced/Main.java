@@ -1,7 +1,6 @@
 package com.xenoteo.treesAndGraphs.checkBalanced;
 
 import com.xenoteo.helpers.tree.Node;
-import com.xenoteo.helpers.tree.Tree;
 import com.xenoteo.helpers.tree.TreeNode;
 import com.xenoteo.helpers.tree.TreeNodeFactory;
 
@@ -52,19 +51,23 @@ public class Main {
         NodeWithHeights balancedWithHeights = (NodeWithHeights)createBalancedTree("NodeWithHeights");
         NodeWithHeights notBalancedWithHeights = (NodeWithHeights)createNotBalancedTree("NodeWithHeights");
 
+        printCheck("checking a balanced tree\n", balanced, balancedWithHeights);
+        printCheck("\nchecking an unbalanced tree\n", notBalanced, notBalancedWithHeights);
+    }
+
+    /**
+     * Printing one check of provided nodes.
+     * @param header to print
+     * @param node to check
+     * @param nodeWithHeights to check
+     */
+    private static void printCheck(String header, Node node, NodeWithHeights nodeWithHeights){
         Solution solution = new Solution();
-
         String format = "%-18s: %b\n";
-        System.out.printf("checking a balanced tree\n" + format + format + format + format,
-                BRUTE_FORCE, solution.isBalanced(balanced),
-                WITH_HEIGHTS, solution.isBalancedWithHeights(balancedWithHeights),
-                WITH_RESULT_CLASS, solution.isBalancedWithResultClass(balanced),
-                OPTIMAL, solution.isBalanced(balanced));
-
-        System.out.printf("\nchecking an unbalanced tree\n" + format + format + format + format,
-                BRUTE_FORCE, solution.isBalanced(notBalanced),
-                WITH_HEIGHTS, solution.isBalancedWithHeights(notBalancedWithHeights),
-                WITH_RESULT_CLASS, solution.isBalancedWithResultClass(notBalanced),
-                OPTIMAL, solution.isBalanced(notBalanced));
+        System.out.printf(header + format + format + format + format,
+                BRUTE_FORCE, solution.isBalanced(node),
+                WITH_HEIGHTS, solution.isBalancedWithHeights(nodeWithHeights),
+                WITH_RESULT_CLASS, solution.isBalancedWithResultClass(node),
+                OPTIMAL, solution.isBalanced(node));
     }
 }
