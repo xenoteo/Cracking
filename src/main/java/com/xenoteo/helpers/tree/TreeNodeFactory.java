@@ -13,6 +13,8 @@ public class TreeNodeFactory {
             return new Node(val);
         if (type.equalsIgnoreCase("NODEWITHHEIGHTS"))
             return new NodeWithHeights(val);
+        if (type.equalsIgnoreCase("NODEWITHPARENTS"))
+            return new NodeWithParents(val);
         return null;
     }
 
@@ -21,6 +23,8 @@ public class TreeNodeFactory {
             return new Node(val, left, right);
         if (type.equalsIgnoreCase("NODEWITHHEIGHTS"))
             return new NodeWithHeights(val, left, right);
+        if (type.equalsIgnoreCase("NODEWITHPARENTS"))
+            return new NodeWithParents(val, (NodeWithParents)left, (NodeWithParents)right);
         return null;
     }
 }
