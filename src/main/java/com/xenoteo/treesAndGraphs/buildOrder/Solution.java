@@ -1,6 +1,5 @@
 package com.xenoteo.treesAndGraphs.buildOrder;
 
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Stack;
 
@@ -14,42 +13,24 @@ import java.util.Stack;
 public class Solution {
 
     /**
-     * Constructing a graph having its vertexes (nodes) and edges (dependencies).
-     * @param nodes of a graph
-     * @param dependencies between nodes
-     */
-    private void constructGraph(List<Node> nodes, List<List<Node>> dependencies){
-        for (Node node : nodes){
-            node.outComing = new LinkedList<>();
-        }
-
-        for (List<Node> pair : dependencies){
-            pair.get(0).outComing.add(pair.get(1));
-            pair.get(1).inComing++;
-        }
-    }
-
-    /**
      * Finding the valid build order by deleting nodes without any incoming edges.
      * Complexity is O(V + E),
      * where V is the number of nodes (projects) and E is the number of dependencies.
-     * @param nodes representing projects
+     * @param projects to build
      * @param dependencies between projects
      * @return valid build order (or error if not exists)
      */
-    public List<Node> buildOrder(List<Node> nodes, List<List<Node>> dependencies){
-        constructGraph(nodes, dependencies);
-        List<Node> order = new LinkedList<>();
-        while (!nodes.isEmpty()){
+    public String[] buildOrder(String[] projects, String[][] dependencies){
+        Graph graph = new Graph(projects, dependencies);
+        String[] order = new String[projects.length];
+        int k = 0;
+        while (!graph.nodes.isEmpty()){
             boolean deleted = false;
-            for (Node node : nodes){
+            for (Node node : graph.nodes){
                 if (node.inComing == 0){
                     deleted = true;
-                    order.add(node);
-                    nodes.remove(node);
-                    for (Node v : node.outComing){
-                        v.inComing--;
-                    }
+                    order[k++] = node.name;
+                    removeProject(node, graph);
                     break;
                 }
             }
@@ -60,21 +41,36 @@ public class Solution {
     }
 
     /**
+     * Removing a project with all its dependencies.
+     * @param node to remove
+     * @param graph to remove the node from
+     */
+    private void removeProject(Node node, Graph graph){
+        graph.nodes.remove(node);
+        for (Node v : node.outComing){
+            v.inComing--;
+        }
+    }
+
+
+
+    /**
      * Finding the valid build order starting from the end using DFS and a stack.
      * Complexity is O(V + E),
      * where V is the number of nodes (projects) and E is the number of dependencies.
-     * @param nodes representing projects
+     * @param projects representing projects
      * @param dependencies between projects
      * @return valid build order (or error if not exists)
      */
-    public List<Node> buildOrderDFS(List<Node> nodes, List<List<Node>> dependencies){
-        constructGraph(nodes, dependencies);
-        Stack<Node> stack = fillStack(nodes);
+    public String[] buildOrderDFS(String[] projects, String[][] dependencies){
+        Graph graph = new Graph(projects, dependencies);
+        Stack<Node> stack = fillStack(graph.nodes);
         if (stack == null)
             throw new NoValidBuildOrderError();
-        LinkedList<Node> order = new LinkedList<>();
+        String[] order = new String[projects.length];
+        int k = 0;
         while (!stack.isEmpty()){
-            order.add(stack.pop());
+            order[k++] = stack.pop().name;
         }
         return order;
     }

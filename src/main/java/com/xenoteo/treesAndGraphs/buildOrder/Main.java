@@ -1,78 +1,59 @@
 package com.xenoteo.treesAndGraphs.buildOrder;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.Arrays;
 
 public class Main {
+    private static final String REMOVING = "Removing independent projects";
+    private static final String DFS = "Using DFS";
+
     public static void main(String[] args) {
-        constructAndPrintBuildOrder();
+        String[] projects = new String[]{"a", "b", "c", "d", "e", "f", "g"};
+        String[][] dependencies = new String[][]{
+                {"f", "c"},
+                {"f", "b"},
+                {"f", "a"},
+                {"c", "a"},
+                {"b", "a"},
+                {"a", "e"},
+                {"b", "e"},
+                {"d", "g"}
+        };
+        printBuildOrder(projects, dependencies);
     }
 
     /**
-     * Constructing a graph and printing a valid build order.
+     * Printing valid build orders of given projects with dependencies.
+     * @param projects to build
+     * @param dependencies between projects
      */
-    private static void constructAndPrintBuildOrder(){
-        Graph graph = constructGraph();
-        System.out.println(new Solution().buildOrder(graph.nodes, graph.dependencies));
+    private static void printBuildOrder(String[] projects, String[][] dependencies){
+        String format = "%-30s: %s\n";
+        System.out.printf(format, "Projects", Arrays.toString(projects));
+        System.out.printf("Dependencies: %s\n\n", dependenciesToString(dependencies));
+        Solution solution = new Solution();
+        System.out.printf(format + format,
+                REMOVING, Arrays.toString(solution.buildOrder(projects, dependencies)),
+                DFS, Arrays.toString(solution.buildOrderDFS(projects, dependencies)));
     }
 
     /**
-     * Constructing a graph.
-     * @return constructed graph
+     * Converting array of dependencies strings to one string.
+     * @param dependencies to convert to string
+     * @return string representing dependencies
      */
-    private static Graph constructGraph(){
-        Graph graph = new Graph();
-        Node a = new Node("a");
-        Node b = new Node("b");
-        Node c = new Node("c");
-        Node d = new Node("d");
-        Node e = new Node("e");
-        Node f = new Node("f");
-        Node g = new Node("g");
-        graph.nodes = new LinkedList<>();
-        graph.nodes.add(a);
-        graph.nodes.add(b);
-        graph.nodes.add(c);
-        graph.nodes.add(d);
-        graph.nodes.add(e);
-        graph.nodes.add(f);
-        graph.nodes.add(g);
-
-        graph.dependencies = new LinkedList<>();
-        List<Node> edge1 = new ArrayList<>();
-        edge1.add(f);
-        edge1.add(a);
-        List<Node> edge2 = new ArrayList<>();
-        edge2.add(f);
-        edge2.add(b);
-        List<Node> edge3 = new ArrayList<>();
-        edge3.add(f);
-        edge3.add(c);
-        List<Node> edge4 = new ArrayList<>();
-        edge4.add(a);
-        edge4.add(e);
-        List<Node> edge5 = new ArrayList<>();
-        edge5.add(b);
-        edge5.add(e);
-        List<Node> edge6 = new ArrayList<>();
-        edge6.add(c);
-        edge6.add(a);
-        List<Node> edge7 = new ArrayList<>();
-        edge7.add(b);
-        edge7.add(a);
-        List<Node> edge8 = new ArrayList<>();
-        edge8.add(d);
-        edge8.add(g);
-        graph.dependencies.add(edge1);
-        graph.dependencies.add(edge2);
-        graph.dependencies.add(edge3);
-        graph.dependencies.add(edge4);
-        graph.dependencies.add(edge5);
-        graph.dependencies.add(edge6);
-        graph.dependencies.add(edge7);
-        graph.dependencies.add(edge8);
-
-        return graph;
+    private static String dependenciesToString(String[][] dependencies){
+        StringBuilder str = new StringBuilder();
+        str.append("[");
+        for (int i = 0; i < dependencies.length - 1; i++){
+            str.append(dependencies[i][0]);
+            str.append(" -> ");
+            str.append(dependencies[i][1]);
+            str.append(", ");
+        }
+        str.append(dependencies[dependencies.length - 1][0]);
+        str.append(" -> ");
+        str.append(dependencies[dependencies.length - 1][1]);
+        str.append("]");
+        return str.toString();
     }
 }
