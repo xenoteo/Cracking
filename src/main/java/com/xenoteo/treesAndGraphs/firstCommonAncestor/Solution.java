@@ -1,15 +1,35 @@
 package com.xenoteo.treesAndGraphs.firstCommonAncestor;
 
-import com.xenoteo.helpers.tree.Node;
 import com.xenoteo.helpers.tree.TreeNode;
 
-public class Solution {
+/**
+ * Finding the first common ancestor using traversing of a tree.
+ * Complexity is O(N).
+ */
+public class Solution extends DescendantChecker implements ISolution{
 
-    // O(N)
-    public TreeNode firstCommonAncestor(Node root, Node first, Node second){
+    /**
+     * Finding the first common ancestor using traversing of a tree.
+     * Starting value is null, and it will not be changed
+     * if some of nodes does not belong to a tree.
+     * @param root of a tree
+     * @param first node
+     * @param second node
+     * @return first common ancestor
+     */
+    public TreeNode firstCommonAncestor(TreeNode root, TreeNode first, TreeNode second){
         return traverse(root, null, first, second);
     }
 
+    /**
+     * Traversing a tree to find the first common ancestor of two nodes,
+     * cumulating the current ancestor.
+     * @param current root to check
+     * @param ancestor is the current ancestor
+     * @param first node
+     * @param second node
+     * @return first common ancestor
+     */
     private TreeNode traverse(TreeNode current, TreeNode ancestor, TreeNode first, TreeNode second){
         if (current == null) return ancestor;
         if (descendant(current, first) && descendant(current, second)){
@@ -21,11 +41,5 @@ public class Solution {
                 ancestor = next;
         }
         return ancestor;
-    }
-
-    private boolean descendant(TreeNode parent, TreeNode child){
-        if (parent == null) return false;
-        if (parent == child) return true;
-        return descendant(parent.left, child) || descendant(parent.right, child);
     }
 }

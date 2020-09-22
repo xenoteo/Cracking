@@ -1,8 +1,8 @@
 package com.xenoteo.treesAndGraphs.firstCommonAncestor;
 
-public class SolutionTest extends ISolutionTest{
+public class SolutionOptimalTest extends ISolutionTest{
     @Override
     protected ISolution getSolution() {
-        return new Solution();
+        return new SolutionOptimal();
     }
 }
