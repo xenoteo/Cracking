@@ -1,34 +1,41 @@
 package com.xenoteo.treesAndGraphs.firstCommonAncestor;
 
-import com.xenoteo.helpers.tree.Node;
+import com.xenoteo.helpers.tree.TreeNode;
+import com.xenoteo.helpers.tree.TreeNodeFactory;
 import org.junit.Assert;
 import org.junit.Test;
 
 public abstract class ISolutionTest {
-    protected Node root;
-    protected Node node1;
-    protected Node node2;
-    protected Node node3;
-    protected Node node4;
-    protected Node node5;
-    protected Node node6;
-    protected Node node7;
-    protected Node node8;
+    protected TreeNode root;
+    protected TreeNode node1;
+    protected TreeNode node2;
+    protected TreeNode node3;
+    protected TreeNode node4;
+    protected TreeNode node5;
+    protected TreeNode node6;
+    protected TreeNode node7;
+    protected TreeNode node8;
+
 
     public ISolutionTest(){
-        node1 = new Node(5);
-        node2 = new Node(11);
-        node3 = new Node(4, null, node1);
-        node4 = new Node(7, node2, node3);
+        String type = getType();
+        TreeNodeFactory factory = new TreeNodeFactory();
 
-        node5 = new Node(12);
-        node6 = new Node(13);
-        node7 = new Node(9, node5, node6);
+        node1 = factory.getTreeNode(type, 5);
+        node2 = factory.getTreeNode(type, 11);
+        node3 = factory.getTreeNode(type, 4, null, node1);
+        node4 = factory.getTreeNode(type, 7, node2, node3);
 
-        node8 = new Node(66);
+        node5 = factory.getTreeNode(type, 12);
+        node6 = factory.getTreeNode(type, 13);
+        node7 = factory.getTreeNode(type, 9, node5, node6);
 
-        root = new Node(15, node4, node7);
+        node8 = factory.getTreeNode(type, 66);
+
+        root = factory.getTreeNode(type, 15, node4, node7);
     }
+
+    protected abstract String getType();
 
     protected abstract ISolution getSolution();
 

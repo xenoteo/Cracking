@@ -1,13 +1,13 @@
 package com.xenoteo.treesAndGraphs.firstCommonAncestor;
 
-public class SolutionTest extends ISolutionTest{
+public class SolutionWithParentsTest extends ISolutionTest {
     @Override
     protected String getType() {
-        return "Node";
+        return "NodeWithParents";
     }
 
     @Override
     protected ISolution getSolution() {
-        return new Solution();
+        return new SolutionWithParents();
     }
 }
