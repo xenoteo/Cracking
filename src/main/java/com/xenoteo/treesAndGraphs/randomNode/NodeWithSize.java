@@ -1,10 +1,18 @@
 package com.xenoteo.treesAndGraphs.randomNode;
 
-import com.xenoteo.helpers.tree.TreeNode;
+import com.xenoteo.treesAndGraphs.randomNode.BSTBase.DeleteResult;
+import com.xenoteo.treesAndGraphs.randomNode.BSTBase.IBSTNode;
+import com.xenoteo.treesAndGraphs.randomNode.BSTBase.ITree;
+import com.xenoteo.treesAndGraphs.randomNode.BSTBase.ITreeWithRandom;
 
 import java.util.Random;
 
-public class NodeWithSize extends Node implements ITreeWithRandom {
+/**
+ * BST node implementing insert(), find(), delete() and getRandomNode() methods.
+ * Using additional field size representing the size of a current subtree.
+ * Finding random node using the size of the current tree and the size of the left subtree.
+ */
+public class NodeWithSize extends IBSTNode implements ITree, ITreeWithRandom {
     public int size;
 
     public NodeWithSize(int val) {
@@ -13,7 +21,12 @@ public class NodeWithSize extends Node implements ITreeWithRandom {
     }
 
     @Override
-    public TreeNode getRandomNode() {
+    protected String type() {
+        return "NodeWithSize";
+    }
+
+    @Override
+    public NodeWithSize getRandomNode() {
         int k = new Random().nextInt(size);
         int leftSize = left == null ? 0 : ((NodeWithSize) left).size;
         if (k < leftSize)
@@ -31,10 +44,10 @@ public class NodeWithSize extends Node implements ITreeWithRandom {
     }
 
     @Override
-    public boolean delete(int val) {
-        boolean deleted = super.delete(val);
-        if (deleted)
+    public DeleteResult delete(int val) {
+        DeleteResult result = super.delete(val);
+        if (result.deleted)
             size--;
-        return deleted;
+        return result;
     }
 }

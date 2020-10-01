@@ -1,6 +1,8 @@
 package com.xenoteo.helpers.tree;
 
 import com.xenoteo.treesAndGraphs.checkBalanced.NodeWithHeights;
+import com.xenoteo.treesAndGraphs.randomNode.BSTBase.BSTNode;
+import com.xenoteo.treesAndGraphs.randomNode.NodeWithSize;
 
 /**
  * Generating a tree node of provided type
@@ -15,6 +17,10 @@ public class TreeNodeFactory {
             return new NodeWithHeights(val);
         if (type.equalsIgnoreCase("NODEWITHPARENTS"))
             return new NodeWithParents(val);
+        if (type.equalsIgnoreCase("NODEWITHSIZE"))
+            return new NodeWithSize(val);
+        if (type.equalsIgnoreCase("BSTNODE"))
+            return new BSTNode(val);
         return null;
     }
 

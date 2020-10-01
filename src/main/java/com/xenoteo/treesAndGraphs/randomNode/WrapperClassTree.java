@@ -1,29 +1,34 @@
 package com.xenoteo.treesAndGraphs.randomNode;
 
 import com.xenoteo.helpers.tree.TreeNode;
-import com.xenoteo.treesAndGraphs.randomNode.ITree;
-import com.xenoteo.treesAndGraphs.randomNode.ITreeWithRandom;
-import com.xenoteo.treesAndGraphs.randomNode.Node;
+import com.xenoteo.treesAndGraphs.randomNode.BSTBase.*;
 
 import java.util.Random;
 
+/**
+ * Wrapper tree class for a BST implementing insert(), find(), delete() and getRandomNode() methods.
+ * Keeping the reference to a current root and the size of a current tree.
+ * Finding random node using the size of the current tree and successor() method.
+ */
 public class WrapperClassTree implements ITree, ITreeWithRandom {
-    private Node root;
+    private IBSTNode root;
     private int size = 0;
 
     public WrapperClassTree(){
 
     }
 
-    public WrapperClassTree(Node root) {
+    public WrapperClassTree(IBSTNode root) {
         this.root = root;
         size = 1;
     }
 
     @Override
     public void insert(int val) {
+        if (find(val) != null)
+            return;
         if (root == null)
-            root = new Node(val);
+            root = new BSTNode(val);
         else
             root.insert(val);
         size++;
@@ -37,14 +42,18 @@ public class WrapperClassTree implements ITree, ITreeWithRandom {
     }
 
     @Override
-    public boolean delete(int val) {
+    public DeleteResult delete(int val) {
+        DeleteResult result = new DeleteResult();
+        result.root = root;
         if (root != null) {
-            boolean deleted = root.delete(val);
-            if (deleted)
+            result = root.delete(val);
+            if (result.deleted)
                 size--;
-            return deleted;
+            root = result.root;
         }
-        return false;
+        else
+            result.deleted = false;
+        return result;
     }
 
     private TreeNode min(){
@@ -62,8 +71,9 @@ public class WrapperClassTree implements ITree, ITreeWithRandom {
             return null;
         int k = new Random().nextInt(size);
         TreeNode node = min();
+        root.initializeParents();
         for (int i = 0; i < k; i++){
-            node = ((Node)node).successor();
+            node = ((IBSTNode)node).successor();
         }
         return node;
     }
