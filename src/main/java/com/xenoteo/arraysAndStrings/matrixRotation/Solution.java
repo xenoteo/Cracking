@@ -6,10 +6,11 @@ package com.xenoteo.arraysAndStrings.matrixRotation;
 public class Solution {
 
     /**
-     * Rotating given N*N matrix by 90 degrees.
+     * Rotates given N*N matrix by 90 degrees.
      * Time complexity is O(N^2), space complexity is O(N^2).
-     * @param matrix to rotate
-     * @return rotated matrix
+     *
+     * @param matrix  the matrix to rotate
+     * @return the rotated matrix
      */
     public int[][] rotateMatrix(int[][] matrix){
         int n = matrix.length;
@@ -21,4 +22,5 @@ public class Solution {
         }
         return rotated;
     }
+
 }
