@@ -10,8 +10,9 @@ public class Main {
     }
 
     /**
-     * Printing an 'old' string and the string with replaced spaces.
-     * @param str is the original string.
+     * Prints the original string and the string with replaced spaces.
+     *
+     * @param str  the original string.
      */
     private static void printOriginalAndReplacedString(String str){
         System.out.printf("%-15s: %s\n%-15s: %s\n\n",
