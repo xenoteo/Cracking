@@ -10,11 +10,12 @@ import java.util.Map;
  */
 public class Solution {
     /**
-     * Checking whether given string is a permutation of palindrome using sorting.
+     * Checks whether given string is a permutation of palindrome using sorting.
      * All letters are treated as lowercase. Spaces are not taken into account.
      * Complexity is O(N * log(N)).
-     * @param str is a string to be checked
-     * @return is given string a permutation of palindrome
+     *
+     * @param str  the string to be checked
+     * @return whether given string is a permutation of palindrome
      */
     public boolean isPalindromePermutationWithSorting(String str){
         char[] chars = removeSpaces(str.toLowerCase().toCharArray()); // without spaces and lower case
@@ -41,11 +42,12 @@ public class Solution {
     }
 
     /**
-     * Checking whether given string is a permutation of palindrome using HashMap.
+     * Checks whether given string is a permutation of palindrome using HashMap.
      * All letters are treated as lowercase. Spaces are not taken into account.
      * Complexity is O(N).
-     * @param str is a string to be checked
-     * @return is given string a permutation of palindrome
+     *
+     * @param str  the string to be checked
+     * @return whether given string is a permutation of palindrome
      */
     public boolean isPalindromePermutationWithMap(String str){
         char[] chars = str.toLowerCase().toCharArray();
@@ -68,8 +70,9 @@ public class Solution {
     }
 
     /**
-     * Counting all spaces in an array of chars representing given string.
-     * @param chars is an array of chars representing given string
+     * Counts all spaces in an array of chars representing the given string.
+     *
+     * @param chars  the array of chars representing the given string
      * @return the number of spaces in a string
      */
     private int countSpaces(char[] chars){
@@ -80,9 +83,10 @@ public class Solution {
     }
 
     /**
-     * Generating new array of chars representing the string without spaces.
-     * @param chars is an array of chars representing given string with spaces
-     * @return array of chars representing given string without spaces
+     * Generates a new array of chars representing the string without spaces.
+     *
+     * @param chars  the array of chars representing the given string with spaces
+     * @return the array of chars representing the given string without spaces
      */
     private char[] removeSpaces(char[] chars){
         char[] newChars = new char[chars.length - countSpaces(chars)];

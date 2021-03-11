@@ -10,9 +10,9 @@ public class Main {
     }
 
     /**
-     * Printing the result of checking whether given string is a permutation of a palindrome,
-     * using different approaches.
-     * @param str is a string to be checked
+     * Prints the result of checking whether given string is a permutation of a palindrome using different approaches.
+     *
+     * @param str  the string to be checked
      */
     private static void printIsPalindrome(String str){
         Solution solution = new Solution();
