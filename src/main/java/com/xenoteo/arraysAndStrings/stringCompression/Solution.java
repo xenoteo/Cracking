@@ -7,9 +7,10 @@ package com.xenoteo.arraysAndStrings.stringCompression;
  */
 public class Solution {
     /**
-     * Compressing sting using the counts of repeated characters.
+     * Compresses sting using the counts of repeated characters.
      * Complexity is O(N + K^2), where K is the number of character sequences.
-     * @param str is a string to be compressed
+     *
+     * @param str  the string to be compressed
      * @return compressed string
      */
     public String compressString(String str){
@@ -33,9 +34,10 @@ public class Solution {
     }
 
     /**
-     * Counting a length of potentially compressed string.
-     * @param str is a string to be compressed
-     * @return a length of compressed string
+     * Counts a length of potentially compressed string.
+     *
+     * @param str  the string to be compressed
+     * @return the length of compressed string
      */
     private int compressedLength(String str){
         int newLength = 0;
@@ -54,8 +56,9 @@ public class Solution {
     }
 
     /**
-     * Counting the number of digits in a number.
-     * @param n is a number to count digits
+     * Counts the number of digits in a number.
+     *
+     * @param n  the number to count digits
      * @return the number of digits in n
      */
     private int digitNumber(int n){
