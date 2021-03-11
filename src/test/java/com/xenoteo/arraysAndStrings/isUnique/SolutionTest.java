@@ -1,4 +1,4 @@
-package com.xenoteo.arraysAndStrings.uniqueCharsInString;
+package com.xenoteo.arraysAndStrings.isUnique;
 
 import org.junit.Assert;
 import org.junit.Test;

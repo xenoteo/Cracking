@@ -1,4 +1,4 @@
-package com.xenoteo.arraysAndStrings.uniqueCharsInString;
+package com.xenoteo.arraysAndStrings.isUnique;
 
 public class Main {
     private static final String IN_PLACE = "in place";
@@ -14,8 +14,9 @@ public class Main {
     }
 
     /**
-     * Printing the result of checking if all the chars of a given string are unique, using different approaches.
-     * @param str is a provided string
+     * Prints the result of checking if all the chars of a given string are unique, using different approaches.
+     *
+     * @param str  the provided string
      */
     private static void printAreCharsInStrUnique(String str){
         Solution ex = new Solution();
