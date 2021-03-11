@@ -6,9 +6,10 @@ public class Main {
     }
 
     /**
-     * Printing two given strings and the result of calling isRotation()
-     * @param str1 is the first string
-     * @param str2 is the second string
+     * Prints two given strings and the result of calling isRotation()
+     *
+     * @param str1  the first string
+     * @param str2  the second string
      */
     private static void printIsRotation(String str1, String str2){
         System.out.printf("\"%s\" & \"%s\": %b\n",

@@ -5,10 +5,11 @@ package com.xenoteo.arraysAndStrings.stringRotation;
  */
 public class Solution {
     /**
-     * Checking if str2 is a rotation of str1.
+     * Checks if str2 is a rotation of str1.
      * Complexity is O(N).
-     * @param str1 is the first string
-     * @param str2 is the second string
+     *
+     * @param str1  the first string
+     * @param str2  the second string
      * @return is str2 a rotation of str1
      */
     public boolean isRotation(String str1, String str2){
