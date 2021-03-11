@@ -7,12 +7,15 @@ package com.xenoteo.arraysAndStrings.oneAway;
  */
 public class Solution {
     /**
-     * Checking if one of two given strings is one (or zero) away from the other.
+     * Checks if one of two given strings is one (or zero) away from the other.
+     *
      * Replacing and removing/inserting considered as two different cases.
      * Removing and inserting considered as one inverted case.
+     *
      * Complexity is O(N).
-     * @param str1 is the first string
-     * @param str2 is the second string
+     *
+     * @param str1  the first string
+     * @param str2  the second string
      * @return is str2 one away from str2
      */
     public boolean isOneAway(String str1, String str2){
@@ -27,10 +30,11 @@ public class Solution {
     }
 
     /**
-     * Checking whether one from two strings of the same length can be obtained by replacing one character.
-     * @param chars1 is an array of chars representing the first string
-     * @param chars2 is an array of chars representing the second string
-     * @return can one character be replaced to obtain two equal strings
+     * Checks whether one from two strings of the same length can be obtained by replacing one character.
+     *
+     * @param chars1  the array of chars representing the first string
+     * @param chars2  the array of chars representing the second string
+     * @return whether one character can be replaced to obtain two equal strings
      */
     private boolean canBeReplaced(char[] chars1, char[] chars2){
         int count = 0;
@@ -44,10 +48,11 @@ public class Solution {
     }
 
     /**
-     * Checking whether one from two strings of lengths different by exactly 1 can be obtained by adding one character.
-     * @param shorter is an array of chars representing shorter string
-     * @param longer is an array of chars representing longer string
-     * @return can one character be inserted to shorted string to obtain two equal strings
+     * Checks whether one from two strings of lengths different by exactly 1 can be obtained by adding one character.
+     *
+     * @param shorter  the array of chars representing shorter string
+     * @param longer  the array of chars representing longer string
+     * @return whether one character can be inserted to shorted string to obtain two equal strings
      */
     private boolean canBeInserted(char[] shorter, char[] longer){
         int count = 0;
@@ -66,9 +71,10 @@ public class Solution {
     }
 
     /**
-     * Checking whether lengths of two given strings differs by not more than 1 character.
-     * @param str1 is the first string
-     * @param str2 is the second string
+     * Checks whether lengths of two given strings differs by not more than 1 character.
+     *
+     * @param str1  the first string
+     * @param str2  the second string
      * @return if the lengths of the stings differs by not more that 1
      */
     private boolean lenDiffIsGood(String str1, String str2){
