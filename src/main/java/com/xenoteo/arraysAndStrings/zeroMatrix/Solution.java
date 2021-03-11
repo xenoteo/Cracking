@@ -1,23 +1,23 @@
 package com.xenoteo.arraysAndStrings.zeroMatrix;
 
+import java.util.Arrays;
 import java.util.HashSet;
 
 /**
- * Reviewing a matrix such that if an element in an MxN matrix is 0,
- * its entire row and column are set to 0.
+ * Reviewing a matrix such that if an element in an MxN matrix is 0, its entire row and column are set to 0.
  */
 public class Solution {
 
     /**
-     * Reviewing matrix such that if an element in an MxN matrix is 0,
-     * its entire row and column are set to 0.
+     * Reviews the matrix such that if an element in an MxN matrix is 0, its entire row and column are set to 0.
      * Using a copy of the matrix.
      * Time complexity is O(M * N), space complexity is O(M * N).
-     * @param matrix to review
-     * @return reviewed matrix
+     *
+     * @param matrix  the matrix to review
+     * @return the reviewed matrix
      */
     public int[][] reviewMatrixWithCopying(int[][] matrix){
-        int[][] reviewed = copyMatrix(matrix);
+        int[][] reviewed = Arrays.stream(matrix).map(int[]::clone).toArray(int[][]::new);
         for (int i = 0; i < matrix.length; i++){
             for (int j = 0; j < matrix[0].length; j++){
                 if (matrix[i][j] == 0) {
@@ -30,12 +30,12 @@ public class Solution {
     }
 
     /**
-     * Reviewing matrix such that if an element in an MxN matrix is 0,
-     * its entire row and column are set to 0.
+     * Reviews the matrix such that if an element in an MxN matrix is 0, its entire row and column are set to 0.
      * Using a set of rows and columns to reset.
      * Time complexity is O(M * N), space complexity is O(M + N).
-     * @param matrix to review
-     * @return reviewed matrix
+     *
+     * @param matrix  the matrix to review
+     * @return the reviewed matrix
      */
     public int[][] reviewMatrixWithSets(int[][] matrix){
         HashSet<Integer> rows = new HashSet<>();
@@ -56,12 +56,12 @@ public class Solution {
     }
 
     /**
-     * Reviewing matrix such that if an element in an MxN matrix is 0,
-     * its entire row and column are set to 0.
+     * Reviews matrix such that if an element in an MxN matrix is 0, its entire row and column are set to 0.
      * Using a set of columns to reset and boolean variable to check if row has 0.
      * Time complexity is O(M * N), space complexity is O(N).
-     * @param matrix to review
-     * @return reviewed matrix
+     *
+     * @param matrix  the matrix to review
+     * @return the reviewed matrix
      */
     public int[][] reviewMatrixWithSet(int[][] matrix){
         HashSet<Integer> columns = new HashSet<>();
@@ -82,12 +82,12 @@ public class Solution {
     }
 
     /**
-     * Reviewing matrix such that if an element in an MxN matrix is 0,
-     * its entire row and column are set to 0.
+     * Reviews matrix such that if an element in an MxN matrix is 0, its entire row and column are set to 0.
      * Using the first row and column to track information about rows and columns to reset.
      * Time complexity is O(M * N), space complexity is O(1).
-     * @param matrix to review
-     * @return reviewed matrix
+     *
+     * @param matrix  the matrix to review
+     * @return the reviewed matrix
      */
     public int[][] reviewMatrixInPlace(int[][] matrix){
         boolean zeroRowHasZero = false;
@@ -126,24 +126,10 @@ public class Solution {
     }
 
     /**
-     * Copying given matrix.
-     * @param matrix to copy
-     * @return a copy of the matrix
-     */
-    private int[][] copyMatrix(int[][] matrix){
-        int length = matrix.length;
-        int width = matrix[0].length;
-        int[][] copy = new int[length][width];
-        for (int i = 0; i < length; i++){
-            System.arraycopy(matrix[i], 0, copy[i], 0, width);
-        }
-        return copy;
-    }
-
-    /**
-     * Setting entire column c to 0.
-     * @param matrix to reset column
-     * @param c is an index of column to reset
+     * Sets the entire column to 0.
+     *
+     * @param matrix  the matrix to reset column
+     * @param c  the index of column to reset
      */
     private void resetColumn(int[][] matrix, int c){
         for (int i = 0; i < matrix.length; i++)
@@ -151,9 +137,10 @@ public class Solution {
     }
 
     /**
-     * Setting entire row r to 0.
-     * @param matrix to reset row
-     * @param r is an index of row to reset
+     * Sets the entire row to 0.
+     *
+     * @param matrix  the matrix to reset row
+     * @param r  the index of row to reset
      */
     private void resetRow(int[][] matrix, int r){
         for (int j = 0; j < matrix[0].length; j++)

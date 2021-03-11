@@ -1,6 +1,7 @@
 package com.xenoteo.arraysAndStrings.zeroMatrix;
 
 import java.util.Arrays;
+import java.util.stream.Collectors;
 
 public class Main {
     private static final String ORIGINAL = "original matrix";
@@ -15,47 +16,29 @@ public class Main {
     }
 
     /**
-     * Printing given matrix and reviewed matrix using different approaches.
-     * @param matrix to rotate
+     * Prints the given matrix and reviewed matrix using different approaches.
+     *
+     * @param matrix  the matrix to rotate
      */
     private static void printMatrices(int[][] matrix){
         Solution solution = new Solution();
-        int[][] copy1 = copyMatrix(matrix);
-        int[][] copy2 = copyMatrix(matrix);
+        int[][] copy1 = Arrays.stream(matrix).map(int[]::clone).toArray(int[][]::new);
+        int[][] copy2 = Arrays.stream(matrix).map(int[]::clone).toArray(int[][]::new);
         System.out.printf("%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n\n",
-                ORIGINAL, getMatrixString(matrix),
-                WITH_COPYING, getMatrixString(solution.reviewMatrixWithCopying(matrix)),
-                WITH_SETS, getMatrixString(solution.reviewMatrixWithSets(matrix)),
-                WITH_SET, getMatrixString(solution.reviewMatrixWithSet(copy1)),
-                IN_PLACE, getMatrixString(solution.reviewMatrixInPlace(copy2)));
+                ORIGINAL, matrixToString(matrix),
+                WITH_COPYING, matrixToString(solution.reviewMatrixWithCopying(matrix)),
+                WITH_SETS, matrixToString(solution.reviewMatrixWithSets(matrix)),
+                WITH_SET, matrixToString(solution.reviewMatrixWithSet(copy1)),
+                IN_PLACE, matrixToString(solution.reviewMatrixInPlace(copy2)));
     }
 
     /**
-     * Creating a string representing given matrix.
-     * @param matrix to make string from
-     * @return a string representing the matrix
+     * Converts a matrix to a string.
+     *
+     * @param matrix  the matrix
+     * @return the string representing the matrix
      */
-    private static String getMatrixString(int[][] matrix){
-        StringBuilder builder = new StringBuilder();
-        for (int[] ints : matrix) {
-            builder.append(Arrays.toString(ints));
-            builder.append("\n");
-        }
-        return builder.toString();
-    }
-
-    /**
-     * Copying given matrix.
-     * @param matrix to copy
-     * @return a copy of the matrix
-     */
-    private static int[][] copyMatrix(int[][] matrix){
-        int length = matrix.length;
-        int width = matrix[0].length;
-        int[][] copy = new int[length][width];
-        for (int i = 0; i < length; i++){
-            System.arraycopy(matrix[i], 0, copy[i], 0, width);
-        }
-        return copy;
+    private static String matrixToString(int[][] matrix){
+        return Arrays.stream(matrix).map(Arrays::toString).collect(Collectors.joining("\n"));
     }
 }
