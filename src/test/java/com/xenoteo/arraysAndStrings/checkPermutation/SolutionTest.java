@@ -1,4 +1,4 @@
-package com.xenoteo.arraysAndStrings.stringPermutation;
+package com.xenoteo.arraysAndStrings.checkPermutation;
 
 import org.junit.Assert;
 import org.junit.Test;
