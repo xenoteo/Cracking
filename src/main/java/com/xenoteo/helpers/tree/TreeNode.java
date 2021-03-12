@@ -1,11 +1,20 @@
 package com.xenoteo.helpers.tree;
 
 /**
- * Simple abstract tree node to extend.
+ * A simple abstract tree node to extend.
  */
 public abstract class TreeNode {
+    /**
+     * The node's value.
+     */
     public int val;
+    /**
+     * The node's left child.
+     */
     public TreeNode left;
+    /**
+     * The node's right child.
+     */
     public TreeNode right;
 
     public TreeNode(int val){

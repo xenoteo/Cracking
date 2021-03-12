@@ -5,8 +5,7 @@ import com.xenoteo.treesAndGraphs.randomNode.BSTBase.BSTNode;
 import com.xenoteo.treesAndGraphs.randomNode.NodeWithSize;
 
 /**
- * Generating a tree node of provided type
- * using one of two available constructors.
+ * The class generating a tree node of provided type using one of two available constructors.
  */
 public class TreeNodeFactory {
 

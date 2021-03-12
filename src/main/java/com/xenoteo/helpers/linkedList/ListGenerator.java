@@ -1,13 +1,14 @@
 package com.xenoteo.helpers.linkedList;
 
 /**
- * Generating a linked list having an array of numbers.
+ * The class generating a linked list having an array of numbers.
  */
 public class ListGenerator {
 
     /**
-     * Generating a linked list.
-     * @param nums is an array of numbers to make list from
+     * Generates a linked list.
+     *
+     * @param nums  the array of numbers to make list from
      * @return the head of the generated list
      */
     public Node generateList(int[] nums){

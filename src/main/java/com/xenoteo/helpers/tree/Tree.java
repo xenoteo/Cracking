@@ -1,12 +1,13 @@
 package com.xenoteo.helpers.tree;
 
 /**
- * Simple tree class.
+ * A simple tree class.
  */
 public class Tree {
+    /**
+     * The root of the tree.
+     */
     public Node root;
-
-    public Tree(){}
 
     public Tree(Node root){
         this.root = root;
@@ -19,10 +20,11 @@ public class Tree {
     }
 
     /**
-     * Recursive comparing of two trees.
+     * Recursively compares two trees.
      * Complexity is O(N).
-     * @param root1 is a root of the first tree
-     * @param root2 is a root of the second tree
+     *
+     * @param root1  the root of the first tree
+     * @param root2  the root of the second tree
      * @return are trees equal
      */
     private boolean treesEqual(TreeNode root1, TreeNode root2){
@@ -34,8 +36,9 @@ public class Tree {
     }
 
     /**
-     * Counting the depth of the tree.
+     * Counts the depth of the tree.
      * Complexity is O(N).
+     *
      * @return the depth of the three.
      */
     public int depth(){
@@ -43,11 +46,11 @@ public class Tree {
     }
 
     /**
-     * Recursive counting of the tree depth.
-     * @param root to start counting from
-     * @param d is a current depth
-     * @param max is a current maximum depth
-     * @return maximum depth
+     * Recursively counts the tree depth.
+     * @param root  the node to start counting from
+     * @param d  the current depth
+     * @param max  the current maximum depth
+     * @return the maximum depth
      */
     private int countDepth(TreeNode root, int d, int max){
         if (root == null) return max;

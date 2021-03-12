@@ -1,7 +1,7 @@
 package com.xenoteo.helpers.tree;
 
 /**
- * Simple tree node.
+ * A simple tree node.
  */
 public class Node extends TreeNode{
 

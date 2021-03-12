@@ -1,9 +1,12 @@
 package com.xenoteo.helpers.tree;
 
 /**
- * Tree node with a reference to parent.
+ * A tree node with a reference to parent.
  */
 public class NodeWithParents extends TreeNode{
+    /**
+     * The parent node.
+     */
     public NodeWithParents parent;
 
     public NodeWithParents(int val) {

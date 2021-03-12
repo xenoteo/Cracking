@@ -1,10 +1,16 @@
 package com.xenoteo.helpers.linkedList;
 
 /**
- * Node of a simple linked list.
+ * The class representing a node of a simple linked list.
  */
 public class Node {
+    /**
+     * The reference to the next node.
+     */
     public Node next;
+    /**
+     * The value of the node.
+     */
     public int val;
 
     public Node(int val){

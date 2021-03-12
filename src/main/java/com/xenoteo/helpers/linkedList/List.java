@@ -4,6 +4,9 @@ package com.xenoteo.helpers.linkedList;
  * Simple linked list implementation.
  */
 public class List {
+    /**
+     * THe head of the list.
+     */
     public Node head;
 
     public List(Node node){
@@ -39,10 +42,11 @@ public class List {
     }
 
     /**
-     * Finding the first node of given value.
+     * Finds the first node of the given value.
      * Complexity is O(N).
-     * @param val to find
-     * @return node of given value
+     *
+     * @param val  the value to find
+     * @return the node of the given value
      */
     public Node find(int val){
         Node node = head;
@@ -54,8 +58,9 @@ public class List {
     }
 
     /**
-     * Counting the length of the list.
+     * Counts the length of the list.
      * Complexity is O(N).
+     *
      * @return the length of the list
      */
     public int length(){
@@ -69,8 +74,9 @@ public class List {
     }
 
     /**
-     * Reversing the list.
+     * Reverses the list.
      * Time complexity is O(N), space complexity is O(N).
+     *
      * @return the head of reversed list
      */
     public Node reversed(){
@@ -92,9 +98,10 @@ public class List {
     }
 
     /**
-     * Checking whether list contains a node with provided reference.
+     * Checks whether list contains a node with the provided reference.
      * Complexity is O(N).
-     * @param node to check
+     *
+     * @param node  the node to check
      * @return if list contains the node
      */
     public boolean contains(Node node){
@@ -107,8 +114,9 @@ public class List {
     }
 
     /**
-     * Finding the last node of the list.
+     * Finds the last node of the list.
      * Complexity is O(N).
+     *
      * @return the last node of the list
      */
     public Node last(){
@@ -121,9 +129,10 @@ public class List {
     }
 
     /**
-     * Finding the kth node of the list.
+     * Finds the kth node of the list.
      * Complexity is O(N).
-     * @param k is index of element to find
+     *
+     * @param k  the index of element to find
      * @return the kth element of the list
      */
     public Node get(int k){
@@ -136,9 +145,10 @@ public class List {
     }
 
     /**
-     * Generating the string of the list representing each node's reference.
+     * Generates the string of the list representing each node's reference.
      * Complexity id O(N).
-     * @return string representing nodes references.
+     *
+     * @return the string representing nodes references.
      */
     public String referencesToString(){
         Node node = head;

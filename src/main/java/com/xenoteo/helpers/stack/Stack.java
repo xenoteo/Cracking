@@ -5,9 +5,12 @@ import com.xenoteo.helpers.linkedList.Node;
 import java.util.EmptyStackException;
 
 /**
- * Simple linked list based stack.
+ * A simple linked list based stack.
  */
 public class Stack implements IStack{
+    /**
+     * The top element of the stack.
+     */
     protected Node last = null;
 
     public void push(int x){

@@ -1,7 +1,7 @@
 package com.xenoteo.helpers.stack;
 
 /**
- * Interface for implementing a basic stack.
+ * The interface for the stack.
  */
 public interface IStack {
     void push(int x);
