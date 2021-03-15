@@ -28,9 +28,9 @@ public class Main {
     }
 
     /**
-     * Printing a circular list and its first node of the loop
-     * founded using different approaches.
-     * @param head of the circular list
+     * Prints a circular list and its first node of the loop founded using different approaches.
+     *
+     * @param head  the head of the circular list
      */
     private static void printLoop(Node head){
         Solution solution = new Solution();
@@ -43,11 +43,13 @@ public class Main {
     }
 
     /**
-     * Generating a string representing nodes references of the circular list.
+     * Generates a string representing nodes references of the circular list.
+     *
      * The first node of the loop is printed twice,
      * the last printed node is the first node of the loop printed the second time.
-     * @param head of the circular list
-     * @return string representing references of the nodes of the circular linked list
+     *
+     * @param head  the head of the circular list
+     * @return the string representing references of the nodes of the circular linked list
      */
     private static String getListLoopString(Node head){
         Node firstLoop = new Solution().detectLoopInPlace(head);

@@ -1,4 +1,4 @@
-package com.xenoteo.linkedLists.duplicatesRemoving;
+package com.xenoteo.linkedLists.removeDups;
 
 import com.xenoteo.helpers.linkedList.List;
 import com.xenoteo.helpers.linkedList.ListGenerator;

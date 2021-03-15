@@ -23,10 +23,10 @@ public class Main {
     }
 
     /**
-     * Printing the references of all nodes of given lists and their intersection node
-     * using different approaches.
-     * @param head1 of the first list
-     * @param head2 of the second list
+     * Prints the references of all nodes of given lists and their intersection node using different approaches.
+     *
+     * @param head1  the head of the first list
+     * @param head2  the head of the second list
      */
     private static void printIntersection(Node head1, Node head2){
         Solution solution = new Solution();

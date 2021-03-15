@@ -1,4 +1,4 @@
-package com.xenoteo.linkedLists.nodeRemoving;
+package com.xenoteo.linkedLists.deleteMiddleNode;
 
 import com.xenoteo.helpers.linkedList.Node;
 
@@ -11,7 +11,8 @@ public class Solution {
     /**
      * Removing a node in the middle of a linked list.
      * Complexity is O(1).
-     * @param node to delete
+     *
+     * @param node  the node to delete
      */
     public void removeNode(Node node){
         if (node == null || node.next == null) return;

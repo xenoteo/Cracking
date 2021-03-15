@@ -1,4 +1,4 @@
-package com.xenoteo.linkedLists.nodeRemoving;
+package com.xenoteo.linkedLists.deleteMiddleNode;
 
 import com.xenoteo.helpers.linkedList.List;
 import com.xenoteo.helpers.linkedList.ListGenerator;

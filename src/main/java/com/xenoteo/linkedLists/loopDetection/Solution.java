@@ -10,9 +10,10 @@ import java.util.HashSet;
 public class Solution {
 
     /**
-     * Returning the first node of the loop using set.
+     * Returns the first node of the loop using set.
      * Time complexity is O(N), space complexity is O(N).
-     * @param head of the list
+     *
+     * @param head  the of the list
      * @return the first node of the loop
      */
     public Node detectLoopWithSet(Node head){
@@ -26,10 +27,11 @@ public class Solution {
     }
 
     /**
-     * Returning the first node of the loop using two pointers.
+     * Returns the first node of the loop using two pointers.
      * Time complexity is O(N), space complexity is O(1).
-     * @param head of the list
-     * @return the first node of the list
+     *
+     * @param head  the of the list
+     * @return the first node of the loop
      */
     public Node detectLoopInPlace(Node head){
         Node fast = head;

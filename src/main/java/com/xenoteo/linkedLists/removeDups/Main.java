@@ -1,4 +1,4 @@
-package com.xenoteo.linkedLists.duplicatesRemoving;
+package com.xenoteo.linkedLists.removeDups;
 
 import com.xenoteo.helpers.linkedList.List;
 import com.xenoteo.helpers.linkedList.ListGenerator;
@@ -15,8 +15,9 @@ public class Main {
     }
 
     /**
-     * Printing the original list and the list with removed duplicates sing different approaches.
-     * @param nums is an array of numbers to make a list from
+     * Prints the original list and the list with removed duplicates using different approaches.
+     *
+     * @param nums  the array of numbers to make a list from
      */
     private static void printLists(int[] nums){
         Solution solution = new Solution();

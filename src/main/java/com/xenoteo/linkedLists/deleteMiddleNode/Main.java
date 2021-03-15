@@ -1,4 +1,4 @@
-package com.xenoteo.linkedLists.nodeRemoving;
+package com.xenoteo.linkedLists.deleteMiddleNode;
 
 import com.xenoteo.helpers.linkedList.*;
 
@@ -9,10 +9,11 @@ public class Main {
     }
 
     /**
-     * Generating and printing a list based on given array of numbers
+     * Generates and prints a list based on given array of numbers
      * before and after removing a node with a given val.
-     * @param nums is an array of number to make a list from
-     * @param val is a value of node to be removed
+     *
+     * @param nums  the array of numbers to make a list from
+     * @param val  the value of the node to be removed
      */
     private static void printLists(int[] nums, int val){
         ListGenerator generator = new ListGenerator();

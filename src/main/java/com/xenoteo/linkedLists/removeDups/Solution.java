@@ -1,19 +1,20 @@
-package com.xenoteo.linkedLists.duplicatesRemoving;
+package com.xenoteo.linkedLists.removeDups;
 
 import com.xenoteo.helpers.linkedList.Node;
 
 import java.util.HashSet;
 
 /**
- * Removing duplicates from an unsorted linked list.
+ * The class removing duplicates from an unsorted linked list.
  */
 public class Solution {
 
     /**
-     * Removing duplicates from an unsorted linked list without using extra space.
+     * Removes duplicates from an unsorted linked list without using extra space.
      * Time complexity is O(N^2), space complexity is O(1).
-     * @param head is a head of the list
-     * @return head of a list without duplicates
+     *
+     * @param head  the head of the list
+     * @return the head of a list without duplicates
      */
     public Node removeDuplicatesInPlace(Node head){
         Node node = head;
@@ -25,10 +26,11 @@ public class Solution {
     }
 
     /**
-     * Removing duplicates from an unsorted linked list using HashSet.
+     * Removes duplicates from an unsorted linked list using HashSet.
      * Time complexity is O(N), space complexity is O(N).
-     * @param head is a head of the list
-     * @return head of a list without duplicates
+     *
+     * @param head  the head of the list
+     * @return the head of a list without duplicates
      */
     public Node removeDuplicatesWithSet(Node head){
         HashSet<Integer> numbersSet = new HashSet<>();
@@ -46,9 +48,9 @@ public class Solution {
     }
 
     /**
-     * Setting provided value unique in the list with a given head.
-     * @param head is a head of the list
-     * @param val is a value to be unique
+     * Sets provided value unique in the list with a given head.
+     * @param head  the head of the list
+     * @param val  the value to be unique
      */
     private void setUnique(Node head, int val){
         boolean found = false;

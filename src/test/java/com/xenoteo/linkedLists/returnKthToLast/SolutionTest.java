@@ -1,4 +1,4 @@
-package com.xenoteo.linkedLists.kthToLast;
+package com.xenoteo.linkedLists.returnKthToLast;
 
 import com.xenoteo.helpers.linkedList.ListGenerator;
 import com.xenoteo.helpers.linkedList.Node;

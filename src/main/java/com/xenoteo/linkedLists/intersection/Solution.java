@@ -6,17 +6,18 @@ import com.xenoteo.helpers.linkedList.Node;
 import java.util.HashSet;
 
 /**
- * Given two singly linked lists, determining if they intersect
- * and returning the intersecting­ node.
+ * Given two singly linked lists, determining if they intersect and returning the intersecting node.
  */
 public class Solution {
 
     /**
-     * Finding the intersecting node of two linked lists.
-     * Time complexity is O(A * B), space complexity is O(1),
-     * where A is the length of the first list and B is the length of the second list.
-     * @param head1 is the head of the first linked list
-     * @param head2 is the head of the second linked list
+     * Finds the intersection node of two linked lists
+     * for all elements of the first list checking whether the second list contains these elements.
+     * Time complexity is O(A * B), where A is the length of the first list and B is the length of the second list,
+     * and space complexity is O(1).
+     *
+     * @param head1  the head of the first linked list
+     * @param head2  the head of the second linked list
      * @return the intersection node
      */
     public Node intersectionNodeInPlace(Node head1, Node head2){
@@ -30,11 +31,12 @@ public class Solution {
     }
 
     /**
-     * Finding the intersecting node of two linked lists.
-     * Time complexity is O(A + B), space complexity is O(A),
-     * where A is the length of the first list and B is the length of the second list.
-     * @param head1 is the head of the first linked list
-     * @param head2 is the head of the second linked list
+     * Finds the intersection node of two linked lists using hash set.
+     * Time complexity is O(A + B), where A is the length of the first list and B is the length of the second list,
+     * and space complexity is O(A).
+     *
+     * @param head1  the head of the first linked list
+     * @param head2  the head of the second linked list
      * @return the intersection node
      */
     public Node intersectionNodeWithSet(Node head1, Node head2){
@@ -54,11 +56,13 @@ public class Solution {
     }
 
     /**
-     * Finding the intersecting node of two linked lists.
-     * Time complexity is O(A + B), space complexity is O(1),
-     * where A is the length of the first list and B is the length of the second list.
-     * @param head1 is the head of the first linked list
-     * @param head2 is the head of the second linked list
+     * Finding the intersection node of two linked lists
+     * iterating over the two lists' tails of equal length (that is of the length of the shortest list).
+     * Time complexity is O(A + B), where A is the length of the first list and B is the length of the second list,
+     * and space complexity is O(1).
+     *
+     * @param head1  the head of the first linked list
+     * @param head2  the head of the second linked list
      * @return the intersection node
      */
     public Node intersectionNodeOptimal(Node head1, Node head2){
