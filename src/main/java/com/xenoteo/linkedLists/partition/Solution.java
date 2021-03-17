@@ -3,20 +3,19 @@ package com.xenoteo.linkedLists.partition;
 import com.xenoteo.helpers.linkedList.Node;
 
 /**
- * Partition of a linked list around a value x,
- * such that all nodes less than x come before all nodes greater than or equal to x.
+ * Partition of a linked list around a value x, such that all nodes less than x come before all nodes greater than or equal to x.
  * If x is contained within the list, the values of x only need to be after the elements less than x.
- * The partition element x can appear anywhere in the "right partition";
- * it does not need to appear between the left and right partitions.
+ * The partition element x can appear anywhere in the "right partition"; it does not need to appear between the left and right partitions.
  */
 public class Solution {
 
     /**
      * Stable partition using 4 pointers.
      * Complexity is O(N).
-     * @param head of the linked list
-     * @param val to make partition around
-     * @return head of a "new" list
+     *
+     * @param head   the head of the linked list
+     * @param val  the value to make partition around
+     * @return the head of a "new" list
      */
     public Node stablePartition(Node head, int val){
         Node lastLesser = null;
@@ -51,9 +50,10 @@ public class Solution {
     /**
      * Not stable partition using 2 pointers.
      * Complexity is O(N).
-     * @param listHead is the head of the linked list
-     * @param val to make partition around
-     * @return head of a "new" list
+     *
+     * @param listHead  the head of the linked list
+     * @param val  the value to make partition around
+     * @return the head of a "new" list
      */
     public Node partition(Node listHead, int val){
         if (listHead == null) return null;

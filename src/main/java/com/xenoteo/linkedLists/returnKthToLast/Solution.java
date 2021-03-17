@@ -3,15 +3,16 @@ package com.xenoteo.linkedLists.returnKthToLast;
 import com.xenoteo.helpers.linkedList.Node;
 
 /**
- * Finding the kth to last element of a singly linked list.
+ * The class finding the kth to last element of a singly linked list.
  */
 public class Solution {
 
     /**
-     * Finding the kth to last element of a linked list using two pointers.
+     * Finds the kth to last element of a linked list using two pointers.
      * Complexity is O(N).
-     * @param head of the linked list
-     * @param k th element to find
+     *
+     * @param head  the head of the linked list
+     * @param k  the index of element to find
      * @return the kth to last element of the list
      */
     public Node kthToLast(Node head, int k){

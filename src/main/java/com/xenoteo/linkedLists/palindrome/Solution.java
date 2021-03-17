@@ -7,7 +7,7 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 /**
- * Checking if a linked list is a palindrome.
+ * The class checking if a linked list is a palindrome.
  */
 public class Solution {
     /**
@@ -16,10 +16,10 @@ public class Solution {
     private boolean isPalindrome = true;
 
     /**
-     * Checking if a linked list is a palindrome
-     * using comparison of original and reversed linked list.
+     * Checks if a linked list is a palindrome using comparison of original and reversed linked list.
      * Time complexity is O(N), space complexity is O(N).
-     * @param head of the list
+     *
+     * @param head  the head of the list
      * @return if the list is a palindrome
      */
     public boolean isPalindromeReversed(Node head){
@@ -28,11 +28,12 @@ public class Solution {
     }
 
     /**
-     * Checking if a linked list is a palindrome using stack.
-     * The first half of the list is pushed to the stack (in reversed order,
+     * Checks if a linked list is a palindrome using stack.
+     * The first half of the list is pushed to the stack (in reversed order),
      * and then it is compared to the second half if the list using popped elements.
      * Time complexity is O(N), space complexity is O(N).
-     * @param head of the list
+     *
+     * @param head  the of the list
      * @return if the list is a palindrome
      */
     public boolean isPalindromeWithStack(Node head){
@@ -59,9 +60,10 @@ public class Solution {
     }
 
     /**
-     * Checking if a linked list is a palindrome using recursion.
+     * Checks if a linked list is a palindrome using recursion.
      * Complexity is O(N).
-     * @param head of the list
+     *
+     * @param head  the of the list
      * @return if the list is a palindrome
      */
     public boolean isPalindromeRecursive(Node head){
@@ -72,12 +74,13 @@ public class Solution {
     }
 
     /**
-     * Recursive comparison of ith and (length - i)th element of the list.
+     * Recursively compares the ith and (length - i)th element of the list.
      * The length of the list is used to find the middle of the list.
      * Using global variable to store current information about palindrome.
-     * @param node to be compared to its "mirror"
-     * @param length of the list ("at the moment")
-     * @return "mirror" to the next node
+     *
+     * @param node  the node to be compared to its "mirror"
+     * @param length   the length of the list ("at the moment")
+     * @return the "mirror" to the next node
      */
     private Node compare(Node node, int length) {
         // leaving isPalindrome true
@@ -95,11 +98,11 @@ public class Solution {
     }
 
     /**
-     * Checking if a linked list is a palindrome
-     * using comparison of the first half and reversed second half of the list,
+     * Checks if a linked list is a palindrome using comparison of the first half and reversed second half of the list,
      * without using of helper methods.
      * Time complexity is O(N), space complexity is O(N).
-     * @param head of the list
+     *
+     * @param head  the of the list
      * @return if the list is a palindrome
      */
     public boolean isPalindromeHalfReversed(Node head){

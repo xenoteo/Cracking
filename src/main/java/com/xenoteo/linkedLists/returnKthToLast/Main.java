@@ -9,10 +9,11 @@ public class Main {
     }
 
     /**
-     * Generating and printing a list based on provided array of numbers,
-     * finding and printing the kth to last element.
-     * @param nums is an array of numbers to generate list from
-     * @param k th element to find
+     * Generates and prints a list based on provided array of numbers,
+     * finds and prints the kth to last element.
+     *
+     * @param nums  the array of numbers to generate list from
+     * @param k  the index of element to find
      */
     private static void printListAndKthToLast(int[] nums, int k){
         ListGenerator generator = new ListGenerator();

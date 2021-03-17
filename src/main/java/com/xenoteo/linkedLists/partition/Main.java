@@ -14,9 +14,10 @@ public class Main {
     }
 
     /**
-     * Printing the original list and list after stable and not stable partitions.
-     * @param nums to generate the list from
-     * @param val to make partition around
+     * Prints the original list and the list after stable and not stable partitions.
+     *
+     * @param nums  the array of numbers to generate the list from
+     * @param val  the value to make partition around
      */
     private static void printLists(int[] nums, int val){
         ListGenerator generator = new ListGenerator();

@@ -16,10 +16,9 @@ public class Main {
     }
 
     /**
-     * Generating a list from given array of numbers
-     * and printing result of checking whether provided list is a palindrome
+     * Generates a list from given array of numbers and prints the result of checking whether provided list is a palindrome
      * (using different approaches).
-     * @param nums to generate a linked list from
+     * @param nums  the array of numbers generate a linked list from
      */
     private static void printIsPalindrome(int[] nums){
         ListGenerator generator = new ListGenerator();
