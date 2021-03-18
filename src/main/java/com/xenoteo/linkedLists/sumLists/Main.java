@@ -1,4 +1,4 @@
-package com.xenoteo.linkedLists.sum;
+package com.xenoteo.linkedLists.sumLists;
 
 import com.xenoteo.helpers.linkedList.*;
 
@@ -15,9 +15,10 @@ public class Main {
     }
 
     /**
-     * Printing the two given lists and their sum founded using provided summing object.
-     * @param head1 is the head of the first list
-     * @param head2 is the head of the second list
+     * Prints the two given lists and their sum founded using provided summing object.
+     *
+     * @param head1  the head of the first list
+     * @param head2  the head of the second list
      */
     private static void printSum(Node head1, Node head2, Summing summing){
         String str1 = new List(head1).toString();
@@ -29,10 +30,11 @@ public class Main {
     }
 
     /**
-     * Finding the max length of 3 given strings.
-     * @param str1 is the first string
-     * @param str2 is the second string
-     * @param str3 is the third string
+     * Finds the max length of 3 given strings.
+     *
+     * @param str1  the first string
+     * @param str2  the second string
+     * @param str3  the third string
      * @return the max length of the strings
      */
     private static int findMaxLen(String str1, String str2, String str3){
@@ -47,9 +49,10 @@ public class Main {
     }
 
     /**
-     * Printing sums of two given lists using all implemented approaches.
-     * @param head1 is the head of the first list
-     * @param head2 is the head of the second list
+     * Prints sums of two given lists using all implemented approaches.
+     *
+     * @param head1  the head of the first list
+     * @param head2  the head of the second list
      */
     private static void printAllSums(Node head1, Node head2){
         System.out.println(ITERATIVE_REVERSED);

@@ -1,10 +1,10 @@
-package com.xenoteo.linkedLists.sum;
+package com.xenoteo.linkedLists.sumLists;
 
 import com.xenoteo.helpers.linkedList.List;
 import com.xenoteo.helpers.linkedList.Node;
 
 /**
- * Abstract class to inherit reversed solutions from.
+ * The abstract class to inherit reversed solutions from.
  */
 public abstract class Reversed {
     /**
@@ -14,9 +14,10 @@ public abstract class Reversed {
     protected Node reversed2;
 
     /**
-     * Setting reversed lists.
-     * @param head1 is the head of the first list
-     * @param head2 is the head of the second list
+     * Sets reversed lists.
+     *
+     * @param head1  the head of the first list
+     * @param head2  the head of the second list
      */
     public void setReversed(Node head1, Node head2){
         reversed1 = new List(head1).reversed();

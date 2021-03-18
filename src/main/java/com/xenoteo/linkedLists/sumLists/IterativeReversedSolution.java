@@ -1,9 +1,9 @@
-package com.xenoteo.linkedLists.sum;
+package com.xenoteo.linkedLists.sumLists;
 
 import com.xenoteo.helpers.linkedList.*;
 
 /**
- * Adding the two numbers and finding the sum as a linked list,
+ * The class adding the two numbers and finding the sum as a linked list,
  * where numbers are represented by a linked list,
  * where each node contains a single digit.
  * Using reversed lists, iterative approach.
@@ -19,9 +19,10 @@ public class IterativeReversedSolution extends Reversed implements Summing{
      * Given lists become reversed and then summed.
      * Complexity is O(max(K, L)), where K and L are the lengths of the lists.
      * The memory for new list is allocated, so space complexity is also O(max(K, L)).
-     * @param head1 is the head of the first list
-     * @param head2 is the head of the second list
-     * @return the sum of two numbers represented by list
+     *
+     * @param head1  the head of the first list
+     * @param head2  the head of the second list
+     * @return the sum of two numbers represented by linked lists
      */
     public Node sum(Node head1, Node head2){
         setReversed(head1, head2);
@@ -51,10 +52,9 @@ public class IterativeReversedSolution extends Reversed implements Summing{
     }
 
     /**
-     * Running over the rest of the one of two lists
-     * in the case when one list is longer than another.
-     * @param tail to be updated
-     * @param node to start running from
+     * Runs over the rest of the one of two lists in the case when one list is longer than another.
+     * @param tail  the tail to be updated
+     * @param node  the node to start running from
      * @return new tail
      */
     private Node setTail(Node tail, Node node){

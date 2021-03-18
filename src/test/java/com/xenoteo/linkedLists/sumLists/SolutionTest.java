@@ -1,4 +1,4 @@
-package com.xenoteo.linkedLists.sum;
+package com.xenoteo.linkedLists.sumLists;
 
 import com.xenoteo.helpers.linkedList.*;
 import org.junit.Assert;

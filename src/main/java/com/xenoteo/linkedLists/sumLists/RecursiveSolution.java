@@ -1,18 +1,18 @@
-package com.xenoteo.linkedLists.sum;
+package com.xenoteo.linkedLists.sumLists;
 
 import com.xenoteo.helpers.linkedList.List;
 import com.xenoteo.helpers.linkedList.Node;
 
 
 /**
- * Adding the two numbers and finding the sum as a linked list,
+ * The class adding the two numbers and finding the sum as a linked list,
  * where numbers are represented by a linked list,
  * where each node contains a single digit.
  * Using lists in the right order, recursive approach.
  */
 public class RecursiveSolution implements Summing{
     /**
-     * The heads of updated lists (with added zeros to the beginning to make the lists's lengths equal).
+     * The heads of updated lists (with added zeros to the beginning to make the lists' lengths equal).
      */
     private Node updated1;
     private Node updated2;
@@ -20,9 +20,10 @@ public class RecursiveSolution implements Summing{
     /**
      * Recursive sum of two numbers represented by linked lists.
      * Complexity is O(max(K, L)), where K and L are the lengths of the lists.
-     * @param head1 is the head of the first list
-     * @param head2 is the head of the second list
-     * @return the sum of two numbers represented by list
+     *
+     * @param head1  the head of the first list
+     * @param head2  the head of the second list
+     * @return the sum of two numbers represented by linked lists
      */
     public Node sum(Node head1, Node head2){
         setUpdated(head1, head2);
@@ -34,9 +35,10 @@ public class RecursiveSolution implements Summing{
     }
 
     /**
-     * Setting the heads of updated lists, such that they have the same length.
-     * @param head1 is the head of the first list
-     * @param head2 is the head of the second list
+     * Sets the heads of updated lists, such that they have the same length.
+     *
+     * @param head1  the head of the first list
+     * @param head2  the head of the second list
      */
     private void setUpdated(Node head1, Node head2){
         int len1 = new List(head1).length();
@@ -52,9 +54,10 @@ public class RecursiveSolution implements Summing{
     }
 
     /**
-     * Adding zeros to the beginning of the list.
-     * @param head of the list to add zeros to
-     * @param diff is the number of zeros to be added
+     * Adds zeros to the beginning of the list.
+     *
+     * @param head  the head of the list to add zeros to
+     * @param diff  the number of zeros to be added
      * @return the head of updated list
      */
     private Node addZeros(Node head, int diff){
@@ -65,10 +68,11 @@ public class RecursiveSolution implements Summing{
     }
 
     /**
-     * Performing recursive sum of digits.
-     * @param node1 is the first node
-     * @param node2 is the second node
-     * @return reference to the current node and carry
+     * Performs the recursive sum of digits.
+     *
+     * @param node1  the first node
+     * @param node2  the second node
+     * @return the reference to the current node and carry
      */
     private SumData digitsSum(Node node1, Node node2){
         if (node1 == null && node2 == null)
