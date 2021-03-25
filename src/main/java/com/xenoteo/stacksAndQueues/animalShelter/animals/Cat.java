@@ -1,7 +1,7 @@
 package com.xenoteo.stacksAndQueues.animalShelter.animals;
 
 /**
- * Representing a cat.
+ * The class representing a cat.
  */
 public class Cat extends Animal {
     public Cat(String name) {

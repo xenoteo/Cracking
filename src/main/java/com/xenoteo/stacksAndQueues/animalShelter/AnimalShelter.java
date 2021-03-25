@@ -5,17 +5,23 @@ import com.xenoteo.stacksAndQueues.animalShelter.animals.*;
 import java.util.LinkedList;
 
 /**
- * An animal shelter, which holds only dogs and cats, operates on a strictly "first in, first out" basis.
+ * An animal shelter, which holds only dogs and cats and operates on a strictly "first in, first out" basis.
  * People must adopt either the "oldest" (based on arrival time) of all animals at the shelter,
  * or they can select whether they would prefer a dog or a cat (and will receive the oldest animal of that type).
  * They cannot select which specific animal they would like.
  * The data structure maintains this system.
  */
 public class AnimalShelter implements IAnimalShelter{
+    /**
+     * The list of cats.
+     */
     private final LinkedList<Cat> cats;
+    /**
+     * The list of dogs.
+     */
     private final LinkedList<Dog> dogs;
     /**
-     * "Current" time in a shelter.
+     * The "current" time in a shelter.
      */
     private int time;
 

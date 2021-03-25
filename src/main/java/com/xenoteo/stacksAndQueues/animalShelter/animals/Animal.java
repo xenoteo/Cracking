@@ -1,11 +1,17 @@
 package com.xenoteo.stacksAndQueues.animalShelter.animals;
 
 /**
- * Representing an animal by its name and time of arrival to a shelter.
+ * The class representing an animal by its name and the time of arrival to a shelter.
  */
 public abstract class Animal {
+    /**
+     * The time of arrival to the shelter.
+     */
     private int time;
-    private String name;
+    /**
+     * The animal's name.
+     */
+    private final String name;
 
     public Animal(String name){
         this.name = name;

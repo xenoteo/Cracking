@@ -1,7 +1,7 @@
 package com.xenoteo.stacksAndQueues.animalShelter.animals;
 
 /**
- * Exception raised when there is no requested animals in the shelter.
+ * The exception raised when there is no requested animals in the shelter.
  */
 public class NoSuchAnimalException extends RuntimeException{
     public NoSuchAnimalException(){

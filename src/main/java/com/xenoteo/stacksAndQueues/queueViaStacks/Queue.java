@@ -5,12 +5,17 @@ import com.xenoteo.helpers.queue.IQueue;
 import com.xenoteo.helpers.stack.Stack;
 
 /**
- * Implementing a queue using two stacks.
- * isEmpty() and add() operations take O(1) time,
- * remove() and peek() take O(N) time.
+ * The class implementing a queue using two stacks.
+ * isEmpty() and add() operations take O(1) time, remove() and peek() take O(N) time.
  */
 public class Queue implements IQueue {
+    /**
+     * The main stack.
+     */
     private final Stack main;
+    /**
+     * The buffer stack.
+     */
     private final Stack buffer;
 
     public Queue(){
@@ -18,10 +23,12 @@ public class Queue implements IQueue {
         buffer = new Stack();
     }
 
+    @Override
     public void add(int x) {
         main.push(x);
     }
 
+    @Override
     public int remove() {
         if (main.isEmpty())
             throw new EmptyQueueException();
@@ -33,6 +40,7 @@ public class Queue implements IQueue {
         return x;
     }
 
+    @Override
     public int peek() {
         if (main.isEmpty())
             throw new EmptyQueueException();
@@ -44,6 +52,7 @@ public class Queue implements IQueue {
         return x;
     }
 
+    @Override
     public boolean isEmpty() {
         return main.isEmpty();
     }

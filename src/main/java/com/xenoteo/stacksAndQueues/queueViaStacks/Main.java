@@ -7,10 +7,12 @@ public class Main {
         queue.add(9);
         queue.add(8);
         queue.add(5);
-        System.out.println("queue.add(1);\n" +
-                "queue.add(9);\n" +
-                "queue.add(8);\n" +
-                "queue.add(5);\n");
+        System.out.println("""
+                queue.add(1);
+                queue.add(9);
+                queue.add(8);
+                queue.add(5);
+                """);
         System.out.printf("queue.isEmpty() = %b\n\n", queue.isEmpty());
         System.out.printf("queue.peek() = %d\n", queue.peek());
         System.out.printf("queue.remove() = %d\n", queue.remove());
