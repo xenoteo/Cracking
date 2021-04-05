@@ -6,47 +6,70 @@ import java.util.ArrayList;
 import java.util.EmptyStackException;
 
 /**
- * Array based set of stacks.
- * Set of stacks is composed of several stacks
- * and creates a new stack once the previous one exceeds capacity.
+ * The array based set of stacks.
+ * Set of stacks is composed of several stacks and creates a new stack once the previous one exceeds capacity.
+ *
  * push() and pop() behave identically to a single stack.
- * Implementing a function popAt(int i) which performs a pop operation on a specific sub-stack.
+ *
+ * The stack implements a function popAt(int i) which performs a pop operation on a specific sub-stack.
  * There are also implemented functions pushAt(int i, int x), peekAt(int i) and isEmptyAt(int i).
- * Once created stack exists forever at ihe same index.
+ *
+ * Once created stack exists forever at the same index.
  */
 public class SetOfArrayStacks implements ISetOfStacks {
-    private static final int SIZE = 50;
+
+    /**
+     * The default capacity of one stack.
+     */
+    private static final int DEFAULT_SIZE = 50;
+
+    /**
+     * The capacity of one stack.
+     */
     private final int size;
 
     /**
-     * Set of all stacks except for the current.
+     * The set of all stacks except the current.
      */
     private ArrayList<int[]> set;
+
     /**
-     * List of last indexes of all the stacks except for current.
+     * The list of last indexes of all the stacks except the current.
      */
     private ArrayList<Integer> lasts;
 
+    /**
+     * The current stack index.
+     */
     private int currentStackIndex;
+
+    /**
+     * The current stack.
+     */
     private int[] currentStack;
+
+    /**
+     * The index of the last element in the current stack.
+     */
     private int lastInCurrentStack;
 
     /**
-     * Max index of ever existed stack.
+     * The max index of ever existed stack.
      */
     private int maxExisted;
 
     /**
-     * Setting default constant value of the size.
+     * Constructor setting default constant value of the size of one stack.
      */
     public SetOfArrayStacks(){
-        size = SIZE;
+        size = DEFAULT_SIZE;
         initialize();
     }
 
     /**
-     * Setting provided size.
-     * @param size to set.
+     * Constructor setting the provided size of one stack.
+     *
+     * @param size  the capacity of one stack
      */
     public SetOfArrayStacks(int size){
         this.size = size;
@@ -54,7 +77,7 @@ public class SetOfArrayStacks implements ISetOfStacks {
     }
 
     /**
-     * Initializing starting values.
+     * Initializes starting values.
      */
     private void initialize(){
         lasts = new ArrayList<>();
@@ -64,20 +87,27 @@ public class SetOfArrayStacks implements ISetOfStacks {
         createNewStack();
     }
 
+    /**
+     * Creates the new stack.
+     */
     private void createNewStack(){
         if (currentStackIndex >= 0){
             set.add(currentStackIndex, currentStack);
             lasts.add(currentStackIndex, lastInCurrentStack);
         }
+
         currentStackIndex++;
+
         if (currentStackIndex > maxExisted)
             maxExisted = currentStackIndex;
+
         currentStack = new int[size];
         lastInCurrentStack = -1;
 
         set.add(currentStackIndex, currentStack);
     }
 
+    @Override
     public void push(int x){
         if (lastInCurrentStack == size - 1)
             createNewStack();
@@ -85,6 +115,7 @@ public class SetOfArrayStacks implements ISetOfStacks {
         currentStack[lastInCurrentStack] = x;
     }
 
+    @Override
     public int pop(){
         if (isEmpty())
             throw new EmptyStackException();
@@ -101,16 +132,19 @@ public class SetOfArrayStacks implements ISetOfStacks {
         return x;
     }
 
+    @Override
     public int peek(){
         if (isEmpty())
             throw new EmptyStackException();
         return currentStack[lastInCurrentStack];
     }
 
+    @Override
     public boolean isEmpty(){
         return currentStackIndex == -1 || lastInCurrentStack == -1;
     }
 
+    @Override
     public int popAt(int i){
         if (i == currentStackIndex)
             return pop();
@@ -123,6 +157,7 @@ public class SetOfArrayStacks implements ISetOfStacks {
         return set.get(i)[last];
     }
 
+    @Override
     public int peekAt(int i) {
         if (i == currentStackIndex)
             return peek();
@@ -134,6 +169,7 @@ public class SetOfArrayStacks implements ISetOfStacks {
         return set.get(i)[last];
     }
 
+    @Override
     public void pushAt(int i, int x) {
         if (i == currentStackIndex)
             push(x);
@@ -147,6 +183,7 @@ public class SetOfArrayStacks implements ISetOfStacks {
         lasts.set(i, last);
     }
 
+    @Override
     public boolean isEmptyAt(int i) {
         if (i == currentStackIndex)
             return isEmpty();

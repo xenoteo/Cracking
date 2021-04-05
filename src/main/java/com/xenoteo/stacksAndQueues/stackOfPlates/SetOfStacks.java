@@ -8,31 +8,49 @@ import java.util.EmptyStackException;
 
 /**
  * Linked list based set of limited stacks.
- * Set of stacks is composed of several stacks
- * and creates a new stack once the previous one exceeds capacity.
+ * Set of stacks is composed of several stacks and creates a new stack once the previous one exceeds capacity.
+ *
  * push() and pop() behave identically to a single stack.
- * Implementing a function popAt(int i) which performs a pop operation on a specific sub-stack.
+ *
+ * The stack implements a function popAt(int i) which performs a pop operation on a specific sub-stack.
  * There are also implemented functions pushAt(int i, int x), peekAt(int i) and isEmptyAt(int i).
+ *
  * Once created stack exists forever at ihe same index.
  */
 public class SetOfStacks implements ISetOfStacks {
-    private static final int SIZE = 50;
+
+    /**
+     * The default capacity of one stack.
+     */
+    private static final int DEFAULT_SIZE = 50;
+
+    /**
+     * The capacity of one stack.
+     */
     private final int size;
 
+    /**
+     * The list of all stacks.
+     */
     private ArrayList<StackLimited> set;
+
+    /**
+     * The current stack.
+     */
     private StackLimited currentStack;
 
     /**
-     * Setting default constant value of the size.
+     * Constructor setting default constant value of the size of one stack.
      */
     public SetOfStacks(){
-        size = SIZE;
+        size = DEFAULT_SIZE;
         initialize();
     }
 
     /**
-     * Setting provided size.
-     * @param size to set.
+     * Constructor setting the provided size of one stack.
+     *
+     * @param size  the capacity of one stack
      */
     public SetOfStacks(int size){
         this.size = size;
@@ -40,7 +58,7 @@ public class SetOfStacks implements ISetOfStacks {
     }
 
     /**
-     * Initializing starting values.
+     * Initializes starting values.
      */
     private void initialize(){
         set = new ArrayList<>();
@@ -48,6 +66,7 @@ public class SetOfStacks implements ISetOfStacks {
         set.add(currentStack);
     }
 
+    @Override
     public void push(int x) {
         if (currentStack.isFull()){
             currentStack = new StackLimited(size);
@@ -56,6 +75,7 @@ public class SetOfStacks implements ISetOfStacks {
         currentStack.push(x);
     }
 
+    @Override
     public int pop() {
         if (isEmpty())
             throw new EmptyStackException();
@@ -64,16 +84,19 @@ public class SetOfStacks implements ISetOfStacks {
         return currentStack.pop();
     }
 
+    @Override
     public int peek() {
         if (isEmpty())
             throw new EmptyStackException();
         return currentStack.peek();
     }
 
+    @Override
     public boolean isEmpty() {
         return set.size() == 1 && currentStack.isEmpty();
     }
 
+    @Override
     public int popAt(int i) {
         int setSize = set.size();
         if (i < 0 || i >= setSize)
@@ -84,6 +107,7 @@ public class SetOfStacks implements ISetOfStacks {
         return stack.pop();
     }
 
+    @Override
     public int peekAt(int i) {
         if (i < 0 || i >= set.size())
             throw new IndexOutOfBoundsException();
@@ -93,6 +117,7 @@ public class SetOfStacks implements ISetOfStacks {
         return stack.peek();
     }
 
+    @Override
     public void pushAt(int i, int x) {
         if (i < 0 || i >= set.size())
             throw new IndexOutOfBoundsException();
@@ -102,6 +127,7 @@ public class SetOfStacks implements ISetOfStacks {
         stack.push(x);
     }
 
+    @Override
     public boolean isEmptyAt(int i) {
         if (i < 0 || i >= set.size())
             throw new IndexOutOfBoundsException();

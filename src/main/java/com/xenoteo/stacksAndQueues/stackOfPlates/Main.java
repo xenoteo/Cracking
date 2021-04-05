@@ -12,8 +12,9 @@ public class Main {
     }
 
     /**
-     * Performing different tasks using provided tests and showing results in the output.
-     * @param stack to test
+     * Performs different tasks using provided tests and shows results in the output.
+     *
+     * @param stack  the stack to test
      */
     private static void showAction(ISetOfStacks stack){
         System.out.printf("stack.isEmpty() = %b\n\n", stack.isEmpty());
@@ -29,16 +30,18 @@ public class Main {
         stack.push(7);
         stack.push(8);
 
-        System.out.println("stack.push(5);\n" +
-                "stack.push(4);\n" +
-                "stack.push(3);\n" +
-                "\n" +
-                "stack.push(1);\n" +
-                "stack.push(2);\n" +
-                "stack.push(3);\n" +
-                "\n" +
-                "stack.push(7);\n" +
-                "stack.push(8);\n");
+        System.out.println("""
+                stack.push(5);
+                stack.push(4);
+                stack.push(3);
+
+                stack.push(1);
+                stack.push(2);
+                stack.push(3);
+
+                stack.push(7);
+                stack.push(8);
+                """);
 
         System.out.printf("stack.isEmpty() = %b\n\n", stack.isEmpty());
 
