@@ -12,15 +12,19 @@ public class Main {
         stack.push(7, 3);
         stack.push(8, 3);
         stack.push(9, 3);
-        System.out.println("stack.push(1, 1);\n" +
-                "stack.push(2, 1);\n" +
-                "stack.push(3, 1);\n\n" +
-                "stack.push(2, 2);\n" +
-                "stack.push(4, 2);\n\n" +
-                "stack.push(6, 3);\n" +
-                "stack.push(7, 3);\n" +
-                "stack.push(8, 3);\n" +
-                "stack.push(9, 3);\n");
+        System.out.println("""
+                stack.push(1, 1);
+                stack.push(2, 1);
+                stack.push(3, 1);
+
+                stack.push(2, 2);
+                stack.push(4, 2);
+
+                stack.push(6, 3);
+                stack.push(7, 3);
+                stack.push(8, 3);
+                stack.push(9, 3);
+                """);
         System.out.printf("stack.pop(1) = %d\n", stack.pop(1));
         System.out.printf("stack.peek(1) = %d\n\n", stack.peek(1));
         System.out.printf("stack.pop(3) = %d\n", stack.pop(3));

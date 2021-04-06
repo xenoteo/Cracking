@@ -1,16 +1,18 @@
-package com.xenoteo.stacksAndQueues.stackSort;
+package com.xenoteo.stacksAndQueues.sortStack;
 
 import com.xenoteo.helpers.stack.Stack;
 
 /**
- * Implementing merge sort on a stack.
+ * The class implementing merge sort on a stack.
  */
 public class MergeSort extends Merging implements Sort {
+
+    @Override
     public Stack sort(Stack stack){
         if (stack.size() < 2)
             return stack;
 
-        // dividing a current stack into two substacks
+        // dividing a current stack into two sub-stacks
         Stack first = new Stack();
         Stack second = new Stack();
         int n = 0;

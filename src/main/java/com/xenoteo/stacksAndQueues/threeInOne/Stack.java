@@ -3,16 +3,19 @@ package com.xenoteo.stacksAndQueues.threeInOne;
 import java.util.EmptyStackException;
 
 /**
- * Implementing three stacks using a single array.
+ * The class implementing three stacks using a single array.
  */
 public class Stack {
-    private static final int SIZE = 100;
     /**
-     * Current size of the stack.
+     * The default size of the stack.
+     */
+    private static final int DEFAULT_SIZE = 100;
+    /**
+     * The current size of the stack.
      */
     private int size;
     /**
-     * Array representing three stacks.
+     * The array representing three stacks.
      */
     private int[] stack;
     /**
@@ -25,25 +28,25 @@ public class Stack {
     private int[] lasts;
 
     /**
-     * Allocating array of default constant size.
+     * Constructor allocating array of the default constant size.
      */
     public Stack(){
-        size = SIZE;
-        setData();
+        size = DEFAULT_SIZE;
+        setUpData();
     }
 
     /**
-     * Allocating array of a given size.
+     * Constructor allocating array of the given size.
      */
     Stack(int size){
         this.size = size;
-        setData();
+        setUpData();
     }
 
     /**
-     * Allocating memory for all arrays and setting initial values.
+     * Allocates memory for all arrays and sets up initial values.
      */
-    private void setData(){
+    private void setUpData(){
         stack = new int[size];
         firsts = new int[3];
         lasts = new int[3];
@@ -55,10 +58,12 @@ public class Stack {
     }
 
     /**
-     * Pushing the element x to the stack of given number.
+     * Pushes the element x to the stack of the given number.
+     *
      * If there is no more free space, new larger stack allocated.
-     * @param x is an element to push
-     * @param stackNum is the stack's number
+     *
+     * @param x  the element to push
+     * @param stackNum  the stack's number
      */
     public void push(int x, int stackNum){
         stackNum--;
@@ -70,9 +75,10 @@ public class Stack {
     }
 
     /**
-     * Popping an element from the stack of a given number (with removing).
-     * @param stackNum is the stack's number
-     * @return the last element of the stack of a given number
+     * Pops the element from the stack of the given number (with removing).
+     *
+     * @param stackNum  the stack's number
+     * @return the last element of the stack of the given number
      */
     public int pop(int stackNum){
         if (!isEmpty(stackNum)){
@@ -85,9 +91,10 @@ public class Stack {
     }
 
     /**
-     * Peeking an element from the stack of a given number (without removing).
-     * @param stackNum is the stack's number
-     * @return the last element of the stack of a given number
+     * Peeks an element from the stack of the given number (without removing).
+     *
+     * @param stackNum  the stack's number
+     * @return the last element of the stack of the given number
      */
     public int peek(int stackNum){
         stackNum--;
@@ -96,9 +103,10 @@ public class Stack {
     }
 
     /**
-     * Checking if a stack of given number is empty.
-     * @param stackNum is the stack's number
-     * @return is the stack of given number empty
+     * Checks if a stack of the given number is empty.
+     *
+     * @param stackNum  the stack's number
+     * @return is the stack of the given number empty
      */
     public boolean isEmpty(int stackNum){
         stackNum--;
@@ -106,8 +114,8 @@ public class Stack {
     }
 
     /**
-     * Allocating memory for new stack of doubled size
-     * and copying all elements to the new array to their new indexes.
+     * Allocates memory for a new stack of doubled size
+     * and copies all elements to the new array to their new indexes.
      */
     private void resize(){
         size *= 2;
@@ -132,11 +140,12 @@ public class Stack {
     }
 
     /**
-     * Copying all elements from the old stack to new stack.
-     * @param newStack to write elements to
-     * @param first is an index to start copying from the old stack from
-     * @param last is an index to stop copying from the old stack
-     * @param newFirst is an index to start writing elements to new stack from
+     * Copies all elements from the old stack to the new stack.
+     *
+     * @param newStack  the new stack write elements to
+     * @param first  the index to start copying from the old stack from
+     * @param last  the index to stop copying from the old stack
+     * @param newFirst  the index to start writing elements to the new stack from
      */
     private void copy(int[] newStack, int first, int last, int newFirst){
         int k = newFirst;
@@ -147,8 +156,9 @@ public class Stack {
     }
 
     /**
-     * Converting the stacks to string.
-     * @return a string representing all stacks
+     * Converts the stacks to string.
+     *
+     * @return the string representing all stacks
      */
     public String toString(){
         return String.valueOf(
@@ -158,9 +168,9 @@ public class Stack {
     }
 
     /**
-     * Converting the stack of given number to string
-     * @param stackNum is the stack's number
-     * @return stack's string
+     * Converts the stack of the given number to string
+     * @param stackNum  the stack's number
+     * @return the string representing the stack of the given number
      */
     private StringBuilder stackToString(int stackNum){
         if (isEmpty(stackNum)) return new StringBuilder("[]\n");

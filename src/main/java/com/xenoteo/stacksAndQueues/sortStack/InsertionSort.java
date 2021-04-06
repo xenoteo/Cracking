@@ -1,30 +1,29 @@
-package com.xenoteo.stacksAndQueues.stackSort;
+package com.xenoteo.stacksAndQueues.sortStack;
 
 import com.xenoteo.helpers.stack.Stack;
 
 /**
- * Implementing stack sort such that the smallest items are on the top,
+ * The class implementing stack sort such that the smallest items are on the top,
  * without copying the elements into any other data structure.
- * Two additional stacks used.
+ *
+ * One additional stack used, using of the second additional stack (like {@link InsertionSortWithBuff})
+ * is replaced with using of the main stack.
+ *
  * Complexity of sort is O(N^2).
  */
-public class InsertionSortWithBuff implements Sort {
+public class InsertionSort implements Sort {
 
+    @Override
     public Stack sort(Stack stack) {
         Stack sorted = new Stack();
-        Stack buff = new Stack();
-
         while (!stack.isEmpty()){
             int x = stack.pop();
             while (!sorted.isEmpty() && sorted.peek() > x)
-                buff.push(sorted.pop());
+                stack.push(sorted.pop());
             sorted.push(x);
-            while (!buff.isEmpty())
-                sorted.push(buff.pop());
         }
         while (!sorted.isEmpty())
             stack.push(sorted.pop());
-
         return stack;
     }
 }

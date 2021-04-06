@@ -1,4 +1,4 @@
-package com.xenoteo.stacksAndQueues.stackSort;
+package com.xenoteo.stacksAndQueues.sortStack;
 
 import com.xenoteo.helpers.stack.Stack;
 import org.junit.Assert;

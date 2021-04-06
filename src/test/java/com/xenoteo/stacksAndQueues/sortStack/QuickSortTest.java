@@ -1,4 +1,4 @@
-package com.xenoteo.stacksAndQueues.stackSort;
+package com.xenoteo.stacksAndQueues.sortStack;
 
 public class QuickSortTest extends SortTest {
     @Override

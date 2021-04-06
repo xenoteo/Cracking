@@ -1,4 +1,4 @@
-package com.xenoteo.stacksAndQueues.stackSort;
+package com.xenoteo.stacksAndQueues.sortStack;
 
 import com.xenoteo.helpers.stack.Stack;
 
@@ -22,9 +22,9 @@ public class Main {
     }
 
     /**
-     * Printing all operations made on stack
-     * to demonstrate the sorting of the stack.
-     * @param sorting to use
+     * Prints all operations made on stack to demonstrate the sorting of the stack.
+     *
+     * @param sorting  the type of sorting to use
      */
     private static void printSorting(Sort sorting){
         Stack stack = new Stack();
@@ -34,11 +34,13 @@ public class Main {
         stack.push(4);
         stack.push(1);
         stack.push(1);
-        System.out.println("stack.push(3);\n" +
-                "stack.push(5);\n" +
-                "stack.push(4);\n" +
-                "stack.push(1);\n" +
-                "stack.push(1);\n");
+        System.out.println("""
+                stack.push(3);
+                stack.push(5);
+                stack.push(4);
+                stack.push(1);
+                stack.push(1);
+                """);
 
         stack = sorting.sort(stack);
         System.out.println("stack = sort.sort(stack);\n");

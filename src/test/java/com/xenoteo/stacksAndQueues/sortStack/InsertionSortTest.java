@@ -1,4 +1,4 @@
-package com.xenoteo.stacksAndQueues.stackSort;
+package com.xenoteo.stacksAndQueues.sortStack;
 
 public class InsertionSortTest extends SortTest{
     @Override

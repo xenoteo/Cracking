@@ -1,14 +1,19 @@
-package com.xenoteo.stacksAndQueues.stackSort;
+package com.xenoteo.stacksAndQueues.sortStack;
 
 import com.xenoteo.helpers.stack.Stack;
 
+/**
+ * The abstract class implementing merging operations on stacks.
+ */
 public abstract class Merging {
     /**
-     * Merging two stacks without any additional space.
+     * Merges two stacks without use of any additional space.
+     *
      * Time complexity is O(N^2), space complexity is O(1).
-     * @param stack1 is the first stack
-     * @param stack2 is the second stack
-     * @return merged stack
+     *
+     * @param stack1  the first stack
+     * @param stack2 the second stack
+     * @return the merged stack
      */
     protected Stack merge(Stack stack1, Stack stack2){
         if (stack2 == null || stack2.size() < 1) return stack1;
@@ -24,11 +29,13 @@ public abstract class Merging {
     }
 
     /**
-     * Merging two stacks with a third buffer stack.
+     * Merges two stacks with a third buffer stack.
+     *
      * Time complexity is O(N), space complexity is O(N).
-     * @param stack1 is the first stack
-     * @param stack2 is the second stack
-     * @return merged stack
+     *
+     * @param stack1  the first stack
+     * @param stack2  the second stack
+     * @return the merged stack
      */
     protected Stack mergeWithBuff(Stack stack1, Stack stack2){
         Stack buff = new Stack();
