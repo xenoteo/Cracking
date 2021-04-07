@@ -4,21 +4,24 @@ import java.util.List;
 import java.util.Stack;
 
 /**
- * Given a list of projects and a list of dependencies (which is a list of pairs of projects,
- * where the second project is dependent on the first project). All of a project's dependencies
- * must be built before the project is.
- * Finding a build order that will allow the projects to be built.
+ * Given a list of projects and a list of dependencies
+ * (which is a list of pairs of projects, where the second project is dependent on the first project).
+ * All of a project's dependencies must be built before the project is.
+ *
+ * The class finding a build order that will allow the projects to be built.
  * If there is no valid build order, returning an error.
  */
 public class Solution {
 
     /**
-     * Finding the valid build order by deleting nodes without any incoming edges.
+     * Finds the valid build order by deleting nodes without any incoming edges.
+     *
      * Complexity is O(V + E),
      * where V is the number of nodes (projects) and E is the number of dependencies.
-     * @param projects to build
-     * @param dependencies between projects
-     * @return valid build order (or error if not exists)
+     *
+     * @param projects  projects to build
+     * @param dependencies  dependencies between projects
+     * @return thr valid build order (or an error if not exists)
      */
     public String[] buildOrder(String[] projects, String[][] dependencies){
         Graph graph = new Graph(projects, dependencies);
@@ -41,9 +44,9 @@ public class Solution {
     }
 
     /**
-     * Removing a project with all its dependencies.
-     * @param node to remove
-     * @param graph to remove the node from
+     * Removes a project with all its dependencies.
+     * @param node  the node to remove
+     * @param graph  the graph to remove the node from
      */
     private void removeProject(Node node, Graph graph){
         graph.nodes.remove(node);
@@ -55,12 +58,14 @@ public class Solution {
 
 
     /**
-     * Finding the valid build order starting from the end using DFS and a stack.
+     * Finds the valid build order starting from the end using DFS and a stack.
+     *
      * Complexity is O(V + E),
      * where V is the number of nodes (projects) and E is the number of dependencies.
-     * @param projects representing projects
-     * @param dependencies between projects
-     * @return valid build order (or error if not exists)
+     *
+     * @param projects  projects to build
+     * @param dependencies  dependencies between projects
+     * @return the valid build order (or an error if not exists)
      */
     public String[] buildOrderDFS(String[] projects, String[][] dependencies){
         Graph graph = new Graph(projects, dependencies);
@@ -76,10 +81,10 @@ public class Solution {
     }
 
     /**
-     * Filling the stack of nodes with the right reversed order
-     * starting DFS from here.
-     * @param nodes of a graph
-     * @return stack with the nodes in valid reversed order (or null if not exists)
+     * Fills the stack of nodes with the right reversed order starting DFS from here.
+     *
+     * @param nodes  nodes of the graph
+     * @return the stack with the nodes in valid reversed order (or null if not exists)
      */
     private Stack<Node> fillStack(List<Node> nodes){
         Stack<Node> stack = new Stack<>();
@@ -94,8 +99,9 @@ public class Solution {
 
     /**
      * DFS with adding visited nodes to a stack.
-     * @param node to process
-     * @param stack to fill
+     *
+     * @param node  the node to process
+     * @param stack  the stack to fill
      * @return true if everything is OK (if there is no cycles)
      */
     private boolean DFS(Node node, Stack<Node> stack){

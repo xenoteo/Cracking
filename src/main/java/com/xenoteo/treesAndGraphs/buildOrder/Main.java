@@ -22,9 +22,10 @@ public class Main {
     }
 
     /**
-     * Printing valid build orders of given projects with dependencies.
-     * @param projects to build
-     * @param dependencies between projects
+     * Prints valid build orders of given projects with dependencies.
+     *
+     * @param projects  projects to build
+     * @param dependencies  dependencies between projects
      */
     private static void printBuildOrder(String[] projects, String[][] dependencies){
         String format = "%-30s: %s\n";
@@ -37,9 +38,10 @@ public class Main {
     }
 
     /**
-     * Converting array of dependencies strings to one string.
-     * @param dependencies to convert to string
-     * @return string representing dependencies
+     * Converts the array of dependencies strings to one string.
+     *
+     * @param dependencies  dependencies to convert to string
+     * @return the string representing dependencies
      */
     private static String dependenciesToString(String[][] dependencies){
         StringBuilder str = new StringBuilder();

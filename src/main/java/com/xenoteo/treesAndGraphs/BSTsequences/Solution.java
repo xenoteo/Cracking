@@ -5,16 +5,16 @@ import com.xenoteo.helpers.tree.TreeNode;
 import java.util.LinkedList;
 
 /**
- * Given a binary search tree with distinct elements,
- * finding all possible arrays that could have led to this tree
+ * Given a binary search tree with distinct elements, finding all possible arrays that could have led to this tree
  * (by traversing through an array from left to right and inserting each element to the tree).
  */
 public class Solution {
 
     /**
-     * Recursive finding of all possible arrays that could have led to this subtree.
-     * @param root of the tree
-     * @return list of sequences that could have led to this tree
+     * Recursively finds all possible arrays that could have led to this subtree.
+     *
+     * @param root  the root of the tree
+     * @return the list of sequences that could have led to this tree
      */
     public LinkedList<LinkedList<Integer>> getSequences(TreeNode root){
         LinkedList<LinkedList<Integer>> sequences = new LinkedList<>();
@@ -41,12 +41,12 @@ public class Solution {
     }
 
     /**
-     * Mixing together sequences from right and left subtrees
-     * keeping the elements within each array in the same relative order.
-     * @param sequences is a result list of sequences to be updated
-     * @param first list to mix
-     * @param second list to mix
-     * @param prefix to be mixed with first and second, being at the beginning
+     * Mixes together sequences from right and left subtrees keeping the elements within each array in the same relative order.
+     *
+     * @param sequences  the result list of sequences to be updated
+     * @param first  the first list to mix
+     * @param second  the second list to mix
+     * @param prefix  the prefix to be mixed with first and second, being at the beginning
      */
     private void mixSequences(LinkedList<LinkedList<Integer>> sequences,
                               LinkedList<Integer> first, LinkedList<Integer> second,

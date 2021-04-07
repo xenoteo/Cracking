@@ -3,26 +3,26 @@ package com.xenoteo.treesAndGraphs.buildOrder;
 import java.util.List;
 
 /**
- * Node representing the vertex of a graph.
+ * The node representing one vertex of the graph.
  */
 public class Node {
     /**
-     * "Children" of the node, or projects dependent on the current project.
+     * The list of node's "children", or the list of projects dependent on the current project.
      */
     public List<Node> outComing;
 
     /**
-     * Number of incoming edges, or number of projects the current project depends on.
+     * The number of incoming edges, or the number of projects the current project depends on.
      */
     public int inComing;
 
     /**
-     * State of the node used for DFS.
+     * The state of the node used for DFS.
      */
     public State state = State.UNVISITED;
 
     /**
-     * Optional name of the node.
+     * The optional name of the node.
      */
     public String name;
 
