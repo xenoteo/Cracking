@@ -6,17 +6,18 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * Determining if T2 is a subtree of T1.
- * A tree T2 is a subtree of T1
- * if there exists a node n in T1 such that the subtree of n is identical to T2.
+ * The class determining if T2 is a subtree of T1.
+ * A tree T2 is a subtree of T1 if there exists a node n in T1 such that the subtree of n is identical to T2.
  */
 public class Solution {
 
     /**
-     * Determining if T2 is a subtree of T1 using comparison of preorder traversings.
+     * Determines if T2 is a subtree of T1 using comparison of preorder traversings.
+     *
      * Complexity is O(M + N), where M is the size of T1 and N is the size of T2.
-     * @param root1 is the root of T1
-     * @param root2 is the root of T2
+     *
+     * @param root1  the root of T1
+     * @param root2  the root of T2
      * @return is T2 a subtree of T1
      */
     public boolean isSubtreePreorder(TreeNode root1, TreeNode root2){
@@ -30,9 +31,10 @@ public class Solution {
     }
 
     /**
-     * Filling str with the values from tree in preorder.
-     * @param str to fill
-     * @param node is a current node to add
+     * Fills str with the values from tree in preorder.
+     *
+     * @param str  the string builder to fill
+     * @param node  the current node to add
      */
     private void preorder(StringBuilder str, TreeNode node){
         if (node == null){
@@ -48,12 +50,13 @@ public class Solution {
 
 
     /**
-     * Determining if T2 is a subtree of T1
-     * using recursive traversing and comparison of subtrees.
+     * Determines if T2 is a subtree of T1 using recursive traversing and comparison of subtrees.
+     *
      * Complexity is O(M + K * N), where M is the size of T1, N is the size of T2,
      * and K is number of nodes in T1 with the value of T2's root.
-     * @param root1 is the root of T1
-     * @param root2 is the root of T2
+     *
+     * @param root1  the root of T1
+     * @param root2  the root of T2
      * @return is T2 a subtree of T1
      */
     public boolean isSubtreeRecursive(TreeNode root1, TreeNode root2) {
@@ -68,10 +71,11 @@ public class Solution {
     }
 
     /**
-     * Finding all nodes of T1 with the value of T2's root.
-     * @param node is a current node to analyze
-     * @param subRoots is a list of sub roots to fill
-     * @param val of T2's root
+     * Finds all nodes of T1 with the value of T2's root.
+     *
+     * @param node  the current node to analyze
+     * @param subRoots  the list of sub roots to fill
+     * @param val  the value of T2's root
      */
     private void findSubRoots(TreeNode node, List<TreeNode> subRoots, int val){
         if (node == null)
@@ -85,9 +89,10 @@ public class Solution {
     }
 
     /**
-     * Checking whether two subtrees are equal.
-     * @param node1 is a node from T1
-     * @param node2 is a node from T2
+     * Checks whether two subtrees are equal.
+     *
+     * @param node1  the node from T1
+     * @param node2  the node from T2
      * @return if subtrees are equal
      */
     private boolean equals(TreeNode node1, TreeNode node2){

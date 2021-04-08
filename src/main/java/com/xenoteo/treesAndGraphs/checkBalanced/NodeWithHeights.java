@@ -3,10 +3,16 @@ package com.xenoteo.treesAndGraphs.checkBalanced;
 import com.xenoteo.helpers.tree.TreeNode;
 
 /**
- * Tree node keeping the heights of its right and left subtrees.
+ * The tree node keeping the heights of its right and left subtrees.
  */
 public class NodeWithHeights extends TreeNode {
+    /**
+     * The height of the left subtree.
+     */
     public int leftSubtreeHeight;
+    /**
+     * The height of the right subtree.
+     */
     public int rightSubtreeHeight;
 
     public NodeWithHeights(int val) {

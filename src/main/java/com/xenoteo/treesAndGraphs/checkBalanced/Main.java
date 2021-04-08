@@ -16,9 +16,10 @@ public class Main {
     }
 
     /**
-     * Creating a balanced tree.
-     * @param type of a tree to create
-     * @return a root of the tree
+     * Creates a balanced tree.
+     *
+     * @param type  the type of a tree to create
+     * @return the root of the tree
      */
     private static TreeNode createBalancedTree(String type){
         TreeNodeFactory factory = new TreeNodeFactory();
@@ -29,9 +30,10 @@ public class Main {
     }
 
     /**
-     * Creating an unbalanced tree.
-     * @param type of a tree to create
-     * @return a root of the tree
+     * Creates an unbalanced tree.
+     *
+     * @param type  the type of a tree to create
+     * @return the root of the tree
      */
     private static TreeNode createNotBalancedTree(String type){
         TreeNodeFactory factory = new TreeNodeFactory();
@@ -43,7 +45,7 @@ public class Main {
     }
 
     /**
-     * Creating trees, checking if they are balanced using different approaches and printing results.
+     * Creates trees, checks if they are balanced using different approaches and printing results.
      */
     private static void printCheckingIsBalanced(){
         Node balanced = (Node)createBalancedTree("Node");
@@ -56,10 +58,11 @@ public class Main {
     }
 
     /**
-     * Printing one check of provided nodes.
-     * @param header to print
-     * @param node to check
-     * @param nodeWithHeights to check
+     * Prints one check of provided nodes.
+     *
+     * @param header  the header to print
+     * @param node  the node  to check
+     * @param nodeWithHeights  the node with heights to check
      */
     private static void printCheck(String header, Node node, NodeWithHeights nodeWithHeights){
         Solution solution = new Solution();
