@@ -2,8 +2,18 @@ package com.xenoteo.treesAndGraphs.firstCommonAncestor;
 
 import com.xenoteo.helpers.tree.TreeNode;
 
+/**
+ * The abstract class checking whether one node is a descendant of another.
+ */
 public abstract class DescendantChecker {
 
+    /**
+     * Checks whether one node is a descendant of another.
+     *
+     * @param parent  the parent node
+     * @param child  the child node
+     * @return whether one node is a descendant of another
+     */
     protected boolean descendant(TreeNode parent, TreeNode child){
         if (parent == null) return false;
         if (parent == child) return true;

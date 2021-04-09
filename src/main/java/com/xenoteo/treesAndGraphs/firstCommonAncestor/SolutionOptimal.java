@@ -3,18 +3,18 @@ package com.xenoteo.treesAndGraphs.firstCommonAncestor;
 import com.xenoteo.helpers.tree.TreeNode;
 
 /**
- * Finding the first common ancestor with faster traversing of a tree.
+ * The class finding the first common ancestor with a faster traversing of a tree.
  * Complexity is O(N).
  */
 public class SolutionOptimal extends DescendantChecker implements ISolution{
 
     /**
-     * Checking whether two nodes belong to a given tree,
-     * and if yes finding their first common ancestor.
-     * @param root of a tree
-     * @param first node
-     * @param second node
-     * @return first common ancestor
+     * Checks whether two nodes belong to a given tree, and if yes finds their first common ancestor.
+     *
+     * @param root  the root of a tree
+     * @param first  the first node
+     * @param second  the second node
+     * @return the first common ancestor
      */
     public TreeNode firstCommonAncestor(TreeNode root, TreeNode first, TreeNode second) {
         if (descendant(root, first) && descendant(root, second))
@@ -23,11 +23,12 @@ public class SolutionOptimal extends DescendantChecker implements ISolution{
     }
 
     /**
-     * Traversing a tree to find the first common ancestor.
-     * @param root of a tree
-     * @param p is the first node
-     * @param q is the second node
-     * @return first common ancestor
+     * Traverses a tree to find the first common ancestor.
+     *
+     * @param root  the of a tree
+     * @param p  the first node
+     * @param q  the second node
+     * @return the first common ancestor
      */
     private TreeNode traverse(TreeNode root, TreeNode p, TreeNode q){
         if (root == null)

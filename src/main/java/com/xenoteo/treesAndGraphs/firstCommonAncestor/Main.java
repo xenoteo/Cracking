@@ -14,8 +14,9 @@ public class Main {
     }
 
     /**
-     * Creating a tree, printing the process of creating and showing current references of all the nodes.
-     * @param type of tree to create
+     * Creates a tree, prints the process of creating and shows current references of all the nodes.
+     *
+     * @param type  the type of tree to create
      */
     private static void createTree(String type){
         TreeNodeFactory factory = new TreeNodeFactory();
@@ -24,10 +25,12 @@ public class Main {
         node3 = factory.getTreeNode(type, 3, null, node2);
         root = factory.getTreeNode(type, 4, node1, node3);
         System.out.printf("type = %s\n", type);
-        System.out.println("node1 = factory.getTreeNode(type, 1);\n" +
-                "node2 = factory.getTreeNode(type, 2);\n" +
-                "node3 = factory.getTreeNode(type, 3, null, node2);\n" +
-                "root = factory.getTreeNode(type, 4, node1, node3);\n");
+        System.out.println("""
+                node1 = factory.getTreeNode(type, 1);
+                node2 = factory.getTreeNode(type, 2);
+                node3 = factory.getTreeNode(type, 3, null, node2);
+                root = factory.getTreeNode(type, 4, node1, node3);
+                """);
         String format = "node%d: %s\n";
         System.out.printf("root : %s\n" + format + format + format + "\n",
                 root,
@@ -37,7 +40,7 @@ public class Main {
     }
 
     /**
-     * Printing founded common ancestors using different approaches.
+     * Prints founded common ancestors using different approaches.
      */
     private static void printFirstCommonAncestorFinding(){
         createTree("Node");
@@ -54,15 +57,16 @@ public class Main {
     }
 
     /**
-     * Printing out what task is performing.
+     * Prints out what a task is performing.
      */
     private static void printTask(){
         System.out.println("Finding the first common ancestor for the nodes node1 and node2");
     }
 
     /**
-     * Printing solution founded using the solution class of given type.
-     * @param type of solution to use
+     * Prints the solution founded using the solution class of the given type.
+     *
+     * @param type  the type of solution to use
      */
     private static void printSolution(String type){
         String format = "%-27s: %s\n";
