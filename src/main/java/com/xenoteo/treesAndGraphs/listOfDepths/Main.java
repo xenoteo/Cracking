@@ -11,9 +11,10 @@ public class Main {
         Node left = new Node(3);
         Node right = new Node(7);
         Node root = new Node(5, left, right);
-        System.out.println("Node left = new Node(3);\n" +
-                "Node right = new Node(7);\n" +
-                "Node root = new Node(5, left, right);");
+        System.out.println("""
+                Node left = new Node(3);
+                Node right = new Node(7);
+                Node root = new Node(5, left, right);""");
 
         Solution solution = new Solution();
 
@@ -26,9 +27,10 @@ public class Main {
     }
 
     /**
-     * Converting list of lists to string.
-     * @param lists to convert to string
-     * @return string representing list of lists
+     * Converts a list of lists to string.
+     *
+     * @param lists  the list of lists to convert to string
+     * @return the string representing list of lists
      */
     private static String listToString(ArrayList<LinkedList<TreeNode>> lists){
         StringBuilder str = new StringBuilder();
