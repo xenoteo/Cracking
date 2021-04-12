@@ -1,8 +1,8 @@
 package com.xenoteo.helpers.tree;
 
-import com.xenoteo.treesAndGraphs.checkBalanced.NodeWithHeights;
-import com.xenoteo.treesAndGraphs.randomNode.BSTBase.BSTNode;
-import com.xenoteo.treesAndGraphs.randomNode.NodeWithSize;
+import com.xenoteo.chapter4_treesAndGraphs.checkBalanced.NodeWithHeights;
+import com.xenoteo.chapter4_treesAndGraphs.randomNode.BSTBase.BSTNode;
+import com.xenoteo.chapter4_treesAndGraphs.randomNode.NodeWithSize;
 
 /**
  * The class generating a tree node of provided type using one of two available constructors.

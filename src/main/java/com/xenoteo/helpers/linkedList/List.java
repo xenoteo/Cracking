@@ -5,7 +5,7 @@ package com.xenoteo.helpers.linkedList;
  */
 public class List {
     /**
-     * THe head of the list.
+     * The head of the list.
      */
     public Node head;
 
