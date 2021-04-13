@@ -1,7 +1,7 @@
 package com.xenoteo.chapter4_treesAndGraphs.randomNode.BSTBase;
 
 /**
- * Class for returning two values after delete() operation.
+ * The class for returning two values after delete() operation.
  */
 public class DeleteResult {
     /**
@@ -10,7 +10,7 @@ public class DeleteResult {
     public boolean deleted = true;
 
     /**
-     * New root of a tree.
+     * The new root of the tree.
      */
     public IBSTNode root;
 }

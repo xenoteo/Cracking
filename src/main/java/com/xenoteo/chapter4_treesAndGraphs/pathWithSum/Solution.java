@@ -9,23 +9,35 @@ import java.util.Map;
 /**
  * Given a binary tree in which each node contains an integer value (which might be positive or negative),
  * counting the number of paths that sum to a given value.
+ *
  * The path does not need to start or end at the root or a leaf, but it must go downwards
  * (traveling only from parent nodes to child nodes).
  */
 public class Solution {
+
+    /**
+     * The number of paths that sum to a given value.
+     */
     private int count;
+    /**
+     * The sum.
+     */
     private int sum;
+    /**
+     * The set of path starting nodes.
+     */
     private HashSet<TreeNode> starts;
 
     /**
-     * Brute force traversing the tree.
-     * Using additional hash set for tracking the starts of paths,
-     * for not counting the same path twice.
+     * Brute force traversal of the tree.
+     *
+     * Using additional hash set for tracking the starts of paths, for not counting the same path twice.
+     *
      * Complexity is O(N * lg(N))
      *
-     * @param root of the tree
-     * @param sum  to find
-     * @return number of paths with given sum
+     * @param root  the root of the tree
+     * @param sum  the sum to find
+     * @return the number of paths with given sum
      */
     public int numberOfPathsWithSumTraversing(TreeNode root, int sum) {
         resetData(sum);
@@ -35,9 +47,9 @@ public class Solution {
     }
 
     /**
-     * Resetting data before start of algorithm.
+     * Resets the data before the start of algorithm.
      *
-     * @param sum to be set
+     * @param sum  the sum to be set
      */
     private void resetData(int sum) {
         count = 0;
@@ -46,13 +58,14 @@ public class Solution {
     }
 
     /**
-     * Traversing the tree and counting the number of appropriate paths.
-     * If new current sum is equal to target sum, then count is incremented.
-     * Continuing the path with the children nodes
-     * or starting new paths from the children.
+     * Traverses the tree and counts the number of appropriate paths.
      *
-     * @param node       to analyze
-     * @param currentSum of path
+     * If new current sum is equal to target sum, then count is incremented.
+     *
+     * Continuing the path with the children nodes or starting new paths from the children.
+     *
+     * @param node  the node to analyze
+     * @param currentSum  the current sum of the path
      */
     private void traverse(TreeNode node, int currentSum) {
         if (node == null)
@@ -74,15 +87,17 @@ public class Solution {
 
 
     /**
-     * Traversing the tree once tracking all current sums (without starting of new paths)
-     * then iterating over a map and finding the number of occurrences of sums with value (currentSum - sum),
+     * Traverses the tree once tracking all current sums (without starting of new paths)
+     * then iterates over a map and finds the number of occurrences of sums with value (currentSum - sum),
      * as it means that there exist partial paths with required sum.
+     *
      * All paths of required sum are also counted.
+     *
      * Complexity is O(N).
      *
-     * @param root of the tree
-     * @param sum  to find
-     * @return number of paths with given sum
+     * @param root  the root of the tree
+     * @param sum  the sum to find
+     * @return the number of paths with given sum
      */
     public int numberOfPathsWithSumWithMap(TreeNode root, int sum) {
         HashMap<Integer, Integer> sumsCount = new HashMap<>();
@@ -96,10 +111,11 @@ public class Solution {
     }
 
     /**
-     * Filling the map with number of occurrences of a certain sum.
-     * @param node to analyze
-     * @param sum is a current sum
-     * @param sumsCount is a map to be filled
+     * Fills the map with the number of occurrences of a certain sum.
+     *
+     * @param node  the node  to analyze
+     * @param sum  the current sum
+     * @param sumsCount  the map to be filled
      */
     private void fillMap(TreeNode node, int sum, HashMap<Integer, Integer> sumsCount) {
         if (node == null)

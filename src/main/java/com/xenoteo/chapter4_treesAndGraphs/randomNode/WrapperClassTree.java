@@ -6,12 +6,20 @@ import com.xenoteo.chapter4_treesAndGraphs.randomNode.BSTBase.*;
 import java.util.Random;
 
 /**
- * Wrapper tree class for a BST implementing insert(), find(), delete() and getRandomNode() methods.
- * Keeping the reference to a current root and the size of a current tree.
+ * The wrapper tree class for a BST implementing insert(), find(), delete() and getRandomNode() methods.
+ *
+ * Keeping the reference to the current root and the size of the current tree.
+ *
  * Finding random node using the size of the current tree and successor() method.
  */
 public class WrapperClassTree implements ITree, ITreeWithRandom {
+    /**
+     * The current root.
+     */
     private IBSTNode root;
+    /**
+     * The size of the current tree.
+     */
     private int size = 0;
 
     public WrapperClassTree(){
@@ -56,6 +64,11 @@ public class WrapperClassTree implements ITree, ITreeWithRandom {
         return result;
     }
 
+    /**
+     * Returns the min element of the current tree.
+     *
+     * @return the min element of the current tree
+     */
     private TreeNode min(){
         if (root == null)
             return null;

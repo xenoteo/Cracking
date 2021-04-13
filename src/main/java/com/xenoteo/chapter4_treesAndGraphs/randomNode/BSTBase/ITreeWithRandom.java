@@ -3,8 +3,13 @@ package com.xenoteo.chapter4_treesAndGraphs.randomNode.BSTBase;
 import com.xenoteo.helpers.tree.TreeNode;
 
 /**
- * Interface for trees implementing method finding a random tree node.
+ * The interface for trees implementing method finding a random tree node.
  */
 public interface ITreeWithRandom {
+    /**
+     * Gets a random tree node.
+     *
+     * @return the random tree node
+     */
     TreeNode getRandomNode();
 }

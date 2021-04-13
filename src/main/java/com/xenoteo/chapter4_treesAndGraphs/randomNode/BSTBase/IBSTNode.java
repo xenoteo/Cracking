@@ -6,15 +6,15 @@ import com.xenoteo.helpers.tree.TreeNodeFactory;
 import java.util.HashMap;
 
 /**
- * Abstract class of a BST node to inherit from.
+ * The abstract class of a BST node to inherit from.
  */
 public abstract class IBSTNode extends TreeNode implements ITree{
     /**
-     * Factory for inserting new nodes of appropriate type.
+     * The factory for inserting new nodes of appropriate type.
      */
     private final TreeNodeFactory factory;
     /**
-     * Hash map for keeping links to parents of nodes (needed for finding successors).
+     * The hash map for keeping links to parents of nodes (needed for finding successors).
      */
     private static HashMap<TreeNode, TreeNode> parents;
 
@@ -24,8 +24,9 @@ public abstract class IBSTNode extends TreeNode implements ITree{
     }
 
     /**
-     * Returning type of instance to create.
-     * @return type of a "current" class
+     * Returns the type of instance to create.
+     *
+     * @return the type of a "current" class
      */
     protected abstract String type();
 
@@ -91,12 +92,13 @@ public abstract class IBSTNode extends TreeNode implements ITree{
     }
 
     /**
-     * Setting a new child to a parent.
+     * Setts a new child to a parent.
      * If parent is null then the root of a tree should be changed.
-     * @param parent to set a new child
-     * @param oldChild to check whether left of right child is being changed
-     * @param newChild to set
-     * @param result to overwrite the root if necessary
+     *
+     * @param parent  the parent to set a new child
+     * @param oldChild  the old child to check whether left of right child is being changed
+     * @param newChild  the new child to set
+     * @param result  the result to overwrite the root if necessary
      */
     private void setChild(TreeNode parent, TreeNode oldChild, TreeNode newChild, DeleteResult result){
         if (parent == null) {
@@ -110,7 +112,7 @@ public abstract class IBSTNode extends TreeNode implements ITree{
     }
 
     /**
-     * Initializing and filling the map with nodes parents.
+     * Initializes and fills the map with nodes parents.
      */
     public void initializeParents(){
         parents = new HashMap<>();
@@ -118,9 +120,10 @@ public abstract class IBSTNode extends TreeNode implements ITree{
     }
 
     /**
-     * Recursive filling of parents map.
-     * @param parent of a node
-     * @param child to set parent
+     * Recursively fills the parents map.
+     *
+     * @param parent  the parent of a node
+     * @param child  the child to set the parent
      */
     private void fillParents(TreeNode parent, TreeNode child){
         if (child == null)
@@ -131,8 +134,9 @@ public abstract class IBSTNode extends TreeNode implements ITree{
     }
 
     /**
-     * Finding a successor of the current node.
-     * @return successor of the node
+     * Finds a successor of the current node.
+     *
+     * @return the successor of the node
      */
     public TreeNode successor(){
         if (right != null){

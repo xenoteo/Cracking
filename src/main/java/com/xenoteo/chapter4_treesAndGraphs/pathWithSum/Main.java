@@ -12,8 +12,7 @@ public class Main {
     }
 
     /**
-     * Printing the creation of the tree and finding paths of a certain sum
-     * using different approaches.
+     * Prints the process of creation of the tree and finds paths of a certain sum using different approaches.
      */
     private static void printFindingPaths(){
         TreeNode root = createTree();
@@ -27,18 +26,21 @@ public class Main {
     }
 
     /**
-     * Creating a tree and printing out the process of creating.
-     * @return root of the created tree
+     * Creates a tree and prints out the process of creating.
+     *
+     * @return the root of the created tree
      */
     private static TreeNode createTree(){
         TreeNode node1 = new Node(3);
         TreeNode node2 = new Node(-1, node1, null);
         TreeNode node3 = new Node(2);
         TreeNode root =  new Node(1, node2, node3);
-        System.out.println("TreeNode node1 = new Node(3);\n" +
-                "TreeNode node2 = new Node(-1, node1, null);\n" +
-                "TreeNode node3 = new Node(2);\n" +
-                "TreeNode root =  new Node(1, node2, node3);\n");
+        System.out.println("""
+                TreeNode node1 = new Node(3);
+                TreeNode node2 = new Node(-1, node1, null);
+                TreeNode node3 = new Node(2);
+                TreeNode root =  new Node(1, node2, node3);
+                """);
         return root;
     }
 }

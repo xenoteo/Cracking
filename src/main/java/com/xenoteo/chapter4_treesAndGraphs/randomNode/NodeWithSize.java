@@ -8,11 +8,16 @@ import com.xenoteo.chapter4_treesAndGraphs.randomNode.BSTBase.ITreeWithRandom;
 import java.util.Random;
 
 /**
- * BST node implementing insert(), find(), delete() and getRandomNode() methods.
+ * The BST node implementing insert(), find(), delete() and getRandomNode() methods.
+ *
  * Using additional field size representing the size of a current subtree.
+ *
  * Finding random node using the size of the current tree and the size of the left subtree.
  */
 public class NodeWithSize extends IBSTNode implements ITree, ITreeWithRandom {
+    /**
+     * The size of the current tree.
+     */
     public int size;
 
     public NodeWithSize(int val) {
