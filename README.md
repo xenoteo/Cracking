@@ -1,5 +1,5 @@
 # Cracking
-Solving problems.
+Solving problems from the *Cracking the Coding Interview* book.
 
 ## Problems
 ### Arrays and strings
