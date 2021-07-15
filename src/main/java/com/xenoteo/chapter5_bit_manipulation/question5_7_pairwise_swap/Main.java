@@ -8,8 +8,9 @@ public class Main {
     }
 
     /**
-     * Printing the original number and the number with swapped bits.
-     * @param n to perform the operations on
+     * Prints the original number and the number with swapped bits.
+     *
+     * @param n  the number to perform the operations on
      */
     private static void printOriginalAndSwappedNumber(int n){
         System.out.printf("%-32s -> %s\n",

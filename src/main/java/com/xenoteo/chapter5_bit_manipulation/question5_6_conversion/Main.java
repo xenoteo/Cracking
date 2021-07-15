@@ -7,10 +7,11 @@ public class Main {
     }
 
     /**
-     * Printing two given integers in their binary representation
+     * Prints two given integers in their binary representation
      * and the number of bits needed to flip to convert a to b.
-     * @param a is the first number
-     * @param b is the second number
+     *
+     * @param a  the first number
+     * @param b  the second number
      */
     private static void printConversionNumber(int a, int b){
         System.out.printf("a: %s\nb: %s\nresult: %d\n\n",

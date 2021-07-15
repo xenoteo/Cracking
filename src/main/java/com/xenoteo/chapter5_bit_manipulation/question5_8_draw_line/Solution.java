@@ -2,11 +2,11 @@ package com.xenoteo.chapter5_bit_manipulation.question5_8_draw_line;
 
 
 /**
+ * The class drawing a horizontal line from (x1, y) to (x2, y).
+ *
  * A monochrome screen is stored as a single array of bytes, allowing eight consecutive pixels to be stored in one byte.
  * The screen has width w, where w is divisible by 8 (that is, no byte will be split across rows).
  * The height of the screen, of course, can be derived from the length of the array and the width.
- *
- * Drawing a horizontal line from (x1, y) to (x2, y).
  *
  * Assuming that bytes are counted from the left to the right and from the bottom to the top,
  * that is the byte with coordinates (x,y) has the index y * (width / 8) + x in the array.
@@ -15,13 +15,14 @@ package com.xenoteo.chapter5_bit_manipulation.question5_8_draw_line;
 public class Solution {
 
     /**
-     * Drawing a horizontal line from (x1, y) to (x2, y).
-     * @param screen to draw line on
-     * @param width of the screen (in bits)
-     * @param x1 is a position to start from
-     * @param x2 is a position to end with
-     * @param y is a height-coordinate of the line
-     * @return changed screen with drawn line
+     * Draws a horizontal line from (x1, y) to (x2, y).
+     *
+     * @param screen  the screen to draw line on
+     * @param width  the width of the screen (in bits)
+     * @param x1  the position to start from
+     * @param x2  the position to end with
+     * @param y  the height-coordinate of the line
+     * @return the changed screen with a line drawn
      */
     public byte[] drawLine(byte[] screen, int width, int x1, int x2, int y){
         int widthInBytes = width / 8;

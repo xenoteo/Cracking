@@ -7,9 +7,9 @@ public class Main {
     }
 
     /**
-     * Printing a given number in its binary representation
-     * and its next and previous numbers.
-     * @param n to print
+     * Prints a given number in its binary representation and its next and previous numbers.
+     *
+     * @param n  the number to print
      */
     private static void printNextAndPrevious(int n){
         String format = "%-9s: %s\n";

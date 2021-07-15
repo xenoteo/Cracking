@@ -10,8 +10,9 @@ public class Main {
     }
 
     /**
-     * Printing given number using decimal and binary representation.
-     * @param n is a number to print
+     * Prints the given number using decimal and binary representation.
+     *
+     * @param n  the number to print
      */
     private static void printDecimalAndBinaryRepresentation(double n){
         System.out.printf("%f\u2081\u2080 = %s\u2082 \n", n, new Solution().binaryToString(n));

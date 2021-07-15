@@ -10,10 +10,10 @@ public class Main {
     }
 
     /**
-     * Printing the given value in a binary representation,
-     * and the length of the longest possible sequence of 1s
-     * after flipping exactly one bit from 0 to 1.
-     * @param n to print
+     * Prints the given value in a binary representation
+     * and the length of the longest possible sequence of 1s after flipping exactly one bit from 0 to 1.
+     *
+     * @param n  the number to print
      */
     private static void printValueAndLengthOfWin(int n){
         Solution solution = new Solution();

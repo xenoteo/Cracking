@@ -7,9 +7,10 @@ package com.xenoteo.chapter5_bit_manipulation.question5_4_next_number;
 public class Solution {
 
     /**
-     * Finding the smallest number that is bigger than n
+     * Finds the smallest number that is bigger than n
      * and that has the same number of 1 bits in its binary representation.
-     * @param n is a given number
+     *
+     * @param n  the given number
      * @return the next number with the same number of ones
      */
     public int nextWithTheSameNumberOfOnes(int n){
@@ -23,9 +24,10 @@ public class Solution {
     }
 
     /**
-     * Finding the biggest number that is smaller than n
+     * Finds the biggest number that is smaller than n
      * and that has the same number of 1 bits in its binary representation.
-     * @param n is a given number
+     *
+     * @param n  the a given number
      * @return the previous number with the same number of ones
      */
     public int previousWithTheSameNumberOfOnes(int n){
@@ -39,10 +41,11 @@ public class Solution {
     }
 
     /**
-     * Setting the last bits of given number.
-     * @param n is a given number
-     * @param count is a number of bits to set
-     * @return number with the last bits set
+     * Sets the last bits of given number.
+     *
+     * @param n  the given number
+     * @param count  the number of bits to set
+     * @return the number with the last bits set
      */
     private int setBits(int n, int count){
         int mask = (1 << count) - 1;
@@ -51,10 +54,11 @@ public class Solution {
     }
 
     /**
-     * Clearing the last bits of given number.
-     * @param n is a given number
-     * @param count is a number of bits to clear
-     * @return number with the last bits cleared
+     * Clears the last bits of given number.
+     *
+     * @param n  the given number
+     * @param count  the number of bits to clear
+     * @return the number with the last bits cleared
      */
     private int clearBits(int n, int count){
         int mask = (~0 << count);
@@ -62,10 +66,11 @@ public class Solution {
     }
 
     /**
-     * Setting the bit of a given number at a given position.
-     * @param n ia given number
-     * @param pos is a position of a bit to set
-     * @return number with the bit of the given position set
+     * Sets the bit of a given number at a given position.
+     *
+     * @param n  the given number
+     * @param pos  the position of a bit to set
+     * @return the number with the bit of the given position set
      */
     private int setBit(int n, int pos){
         int mask = (1 << pos);
@@ -73,10 +78,11 @@ public class Solution {
     }
 
     /**
-     * Clearing the bit of a given number at a given position.
-     * @param n ia given number
-     * @param pos is a position of a bit to clear
-     * @return number with the bit of the given position cleared
+     * Clears the bit of a given number at a given position.
+     *
+     * @param n  the given number
+     * @param pos  the position of a bit to clear
+     * @return the number with the bit of the given position cleared
      */
     private int clearBit(int n, int pos){
         int mask = ~(1 << pos);
@@ -84,10 +90,11 @@ public class Solution {
     }
 
     /**
-     * Counting all the ones before a given position.
-     * @param n is a given number
-     * @param pos is a position to stop counting
-     * @return number of ones before given position
+     * Counts all the ones before a given position.
+     *
+     * @param n  the given number
+     * @param pos  the position to stop counting
+     * @return the number of ones before given position
      */
     private int countOnes(int n, int pos){
         int mask = 1;
@@ -100,10 +107,11 @@ public class Solution {
     }
 
     /**
-     * Finding the position of the first bit being not at the tail.
-     * @param n is a given number
-     * @param lookingFor is a bit looking for (1 or 0)
-     * @return position of the first bit being not at the tail
+     * Finds the position of the first bit being not at the tail.
+     *
+     * @param n  the given number
+     * @param lookingFor  the bit looking for (1 or 0)
+     * @return the position of the first bit being not at the tail
      */
     private int firstNotTailing(int n, int lookingFor){
         int mask = 1;

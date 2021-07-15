@@ -6,6 +6,13 @@ package com.xenoteo.chapter5_bit_manipulation.question5_2_binary_to_string;
  */
 public class Solution {
 
+    /**
+     * Given a real number between O and 1 (e.g., 0.72) that is passed in as a double,
+     * finds its binary representation.
+     *
+     * @param n  the number
+     * @return the string representing number's binary representation
+     */
     public String binaryToString(double n){
         if (n >= 1 || n <= 0)
             return "ERROR";

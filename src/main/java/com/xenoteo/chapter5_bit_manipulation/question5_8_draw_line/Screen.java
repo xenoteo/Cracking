@@ -6,10 +6,11 @@ package com.xenoteo.chapter5_bit_manipulation.question5_8_draw_line;
 public class Screen {
 
     /**
-     * Drawing a screen.
-     * @param screen to draw
-     * @param width of the screen
-     * @return string representing the screen
+     * Draws a screen.
+     *
+     * @param screen  the screen to draw
+     * @param width  the width of the screen
+     * @return the string representing the screen
      */
     public String draw(byte[] screen, int width){
         int widthInBytes = width / 8;
@@ -25,9 +26,10 @@ public class Screen {
     }
 
     /**
-     * Converting a byte to a binary string of the length 8.
-     * @param n to convert
-     * @return binary string representing the given number
+     * Converts a byte to a binary string of the length 8.
+     *
+     * @param n  the byte to convert
+     * @return the binary string representing the given number
      */
     private String byteToString(byte n){
         return String.format("%8s", Integer.toBinaryString(n & 0xFF)).replace(' ', '0');
