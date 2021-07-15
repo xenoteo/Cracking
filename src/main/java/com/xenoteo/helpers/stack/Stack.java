@@ -1,6 +1,6 @@
 package com.xenoteo.helpers.stack;
 
-import com.xenoteo.helpers.linkedList.Node;
+import com.xenoteo.helpers.linked_list.Node;
 
 import java.util.EmptyStackException;
 
