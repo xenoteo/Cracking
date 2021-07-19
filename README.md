@@ -125,6 +125,10 @@ Solving problems from the *Cracking the Coding Interview* book.
   at which point they immediately stop to have new children).
 - The simulation of the [building with a breakpoint](src/main/java/com/xenoteo/chapter6_math_and_logic_puzzles/question6_8_the_egg_drop_problem/Building.java) 
   where an egg starts to drop from; given two eggs, finding the breakpoint, while minimizing the number of drops for the worst case.
+- Having 100 iterations of closing/opening specific lockers, 
+  counting [how many lockers remain open](src/main/java/com/xenoteo/chapter6_math_and_logic_puzzles/question6_9_100_lockers/Solution.java) 
+  after the last iteration.
+- Finding the [poisoned bottle of soda](src/main/java/com/xenoteo/chapter6_math_and_logic_puzzles/question6_10_poison).
 
 ## Helpers
 - Simple [linked list](src/main/java/com/xenoteo/helpers/linked_list/List.java) implementation based on 
