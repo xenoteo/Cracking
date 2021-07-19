@@ -15,6 +15,11 @@ public class Main {
         setBreakingPointAndFindIt(79);
     }
 
+    /**
+     * Sets the breaking point, finds it and prints it and the number of steps needed to find it.
+     *
+     * @param breakingPoint  the breaking point
+     */
     private static void setBreakingPointAndFindIt(int breakingPoint) {
         Building building = new Building();
         building.setBreakingPoint(breakingPoint);
