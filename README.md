@@ -119,6 +119,13 @@ Solving problems from the *Cracking the Coding Interview* book.
 - [Drawing a horizontal line](src/main/java/com/xenoteo/chapter5_bit_manipulation/question5_8_draw_line/Solution.java) 
   on a monochrome screen represented by bits (+[tests](src/test/java/com/xenoteo/chapter5_bit_manipulation/question5_8_draw_line/SolutionTest.java)).
 
+### Math and logic puzzles
+- The simulation of the [next post-apocalypses generation](src/main/java/com/xenoteo/chapter6_math_and_logic_puzzles/question6_7_the_apocalypse/Solution.java)
+(when the current generation continue to have children until they have one girl, 
+  at which point they immediately stop to have new children).
+- The simulation of the [building with a breakpoint](src/main/java/com/xenoteo/chapter6_math_and_logic_puzzles/question6_8_the_egg_drop_problem/Building.java) 
+  where an egg starts to drop from; given two eggs, finding the breakpoint, while minimizing the number of drops for the worst case.
+
 ## Helpers
 - Simple [linked list](src/main/java/com/xenoteo/helpers/linked_list/List.java) implementation based on 
   [nodes](src/main/java/com/xenoteo/helpers/linked_list/Node.java) and 
