@@ -17,6 +17,8 @@ In `Main.java` there are some examples of use of Solution class.
 
 In `README.md` there is a description of the problem.
 
+*Note: for some problems another file structure can be provided (e.g., if more classes are required).*
+
 ## Problems
 ### [Arrays and Strings](src/main/java/com/xenoteo/chapter1_arrays_and_strings)
 - [1.1](src/main/java/com/xenoteo/chapter1_arrays_and_strings/question1_1_is_unique)
