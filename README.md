@@ -159,15 +159,17 @@ In `README.md` there is a description of the problem.
 *Note: there are solutions only for those problems where coding approach can be used. 
 If there is no coding solution for a specific problem, then this problem can or should be solved without it.*
 - [6.7](src/main/java/com/xenoteo/chapter6_math_and_logic_puzzles/question6_7_the_apocalypse)
-  &nbsp;&nbsp;The Apocalypse
+  &nbsp;&nbsp;(+[tests](src/test/java/com/xenoteo/chapter6_math_and_logic_puzzles/question6_7_the_apocalypse/SolutionTest.java))
+  The Apocalypse
 - [6.8](src/main/java/com/xenoteo/chapter6_math_and_logic_puzzles/question6_8_the_egg_drop_problem)
-  &nbsp;&nbsp;The Egg Drop Problem
+  &nbsp;&nbsp;(+[tests](src/test/java/com/xenoteo/chapter6_math_and_logic_puzzles/question6_8_the_egg_drop_problem/SolutionTest.java))
+  The Egg Drop Problem
 - [6.9](src/main/java/com/xenoteo/chapter6_math_and_logic_puzzles/question6_9_100_lockers)
-  &nbsp;&nbsp;100 Lockers
+  &nbsp;&nbsp;(+[tests](src/test/java/com/xenoteo/chapter6_math_and_logic_puzzles/question6_9_100_lockers))
+  100 Lockers
 - [6.10](src/main/java/com/xenoteo/chapter6_math_and_logic_puzzles/question6_10_poison)
+  (+[tests](src/test/java/com/xenoteo/chapter6_math_and_logic_puzzles/question6_10_poison/SolutionTest.java))
   Poison
-
-
 
 ## [Helpers](src/main/java/com/xenoteo/helpers)
 - Simple [linked list](src/main/java/com/xenoteo/helpers/linked_list/List.java) implementation based on 
